@@ -6,7 +6,7 @@
 
 ## Como usar o Projeto
 
- O arquivo pega dados dos sites e usando o BeautifulSoup do Python procura pelas tags Html com as informações necessárias de cada jogador como nome, idade, posição e potencial para salvar em um arquivo ".csv" e depois poder ser importado e usado no aplicativo.
+ O arquivo pega dados dos sites e usando o BeautifulSoup do Python procura pelas tags Html com as informações necessárias de cada jogador como nome, idade, posição e potencial para salvar em um arquivo ".csv". Finalizado, seu processo os arquivos gerados poderm ser importados e usados no aplicativo.
 
 ## Como Executar o projeto
 
