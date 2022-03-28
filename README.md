@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto 
 
- Arquivos em Python para extrair dados online de jogadores do FIFA e de outros bancos de dados, para ser usado no meu jogo de Football Manager.
+ Arquivos em Python para extrair dados online de jogadores do banco de dados do site SoFifa e SoccerWiki, para ser usado no meu jogo de Football Manager.
 
 ## Como usar o Projeto
 
