@@ -10,4 +10,5 @@
 
 ## Como Executar o projeto
 
- Com um compilador python execute o arquivo "fifa_scrapper.py" e então serão gerados os arquivos ".csv" com os jogadores dos clubes.
+ 1º Baixe todos os arquivos
+ 2º Com um compilador python execute o arquivo "fifa_scrapper.py" e então serão gerados os arquivos ".csv" com os jogadores dos clubes.
