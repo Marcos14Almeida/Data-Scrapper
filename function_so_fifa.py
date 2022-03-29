@@ -67,5 +67,6 @@ def soFifa(siteUrl):
      player = Player(x,clubName,name_list[x],positions_list[x],age_list[x],overall_list[x])
      listAllPlayers.append(player)
      print(name_list[x],positions_list[x],age_list[x],overall_list[x])   
-    
+  print('Time: %s' %clubName) 
+  
   return listAllPlayers   

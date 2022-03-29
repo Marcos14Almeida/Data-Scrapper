@@ -12,7 +12,6 @@ from renameClubs import renameClubs
 
 #%%
 def saveToFile(filename,listAllPlayers):
-    
     #limpa os dados anteriores do arquivo
     with open('data/'+filename+'.csv', 'w', encoding="utf-8") as csvFile:
         csvFile.close()
@@ -47,7 +46,7 @@ def saveToFile(filename,listAllPlayers):
 #%%                
     #SAVE TO CSV
     with open('data/'+filename+'.csv', 'a', encoding="utf-8") as csvFile:
-       writer = csv.writer(csvFile)
+       writer = csv.writer(csvFile, quoting=csv.QUOTE_NONE, escapechar=' ') #remove quotes in the beggining and end of row
        for string in row_string:
            writer.writerow(string)
     csvFile.close    

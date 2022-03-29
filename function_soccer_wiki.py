@@ -8,6 +8,7 @@ import requests
 import re #regular expressions
 from bs4 import BeautifulSoup
 from class_player import Player
+from global_file import globalErrors
  
 #%%  
 def soccerWiki(clubID):
@@ -60,10 +61,19 @@ def soccerWiki(clubID):
       #Retira certas letras indesejadas  
       all_players[x] = all_players[x].replace('ć','c')
       all_players[x] = all_players[x].replace('é','e')
-      all_players[x] = all_players[x].replace('š','s')
       all_players[x] = all_players[x].replace('ó','o')
+      all_players[x] = all_players[x].replace('ô','o')
+      all_players[x] = all_players[x].replace('ã','a')
+      all_players[x] = all_players[x].replace('ă','a')
       all_players[x] = all_players[x].replace('á','a')
       all_players[x] = all_players[x].replace('è','e')
+      all_players[x] = all_players[x].replace('ê','e')
+      all_players[x] = all_players[x].replace('í','i')
+      all_players[x] = all_players[x].replace('ú','u')
+      all_players[x] = all_players[x].replace('ü','u')
+      all_players[x] = all_players[x].replace('ç','c')
+      all_players[x] = all_players[x].replace('č','c')
+      all_players[x] = all_players[x].replace('š','s')
      
 #%%        
     #Ex: WeventonG -> 'Weverto','nG,'' -> 'Weverton','G'    
@@ -73,7 +83,7 @@ def soccerWiki(clubID):
       positions = x.split(',')     
       name = re.split('([a-z][A-Z])',positions[0]) #() mantem os delimitadores
       print(name)
-      name[0] = name[0] +name[1][0] #junta o nome com a ultima letra que foi separada
+      name[0] = name[0] +name[1][0] #junta o nome com a ultima letra que foi separada -> Se der Erro aqui é por causa de caracter invalido
       name[1] = name[1][1]+name[2] #junta o nome da posicao
       name = list(filter(None, name)) #remove espaçoes vazio
       name_list.append(name[0])
@@ -94,13 +104,17 @@ def soccerWiki(clubID):
     print('\n----------------------------------------------------------------')
     print('SiteUrl: %s' %siteUrl)
     print('Time: %s' %clubName)
-    print("NÚMERO DE JOGADORES: %i\n" % len(all_players))
+    print("NÚMERO DE JOGADORES: %i\n" % len(name_list))
     
     listAllPlayers = []
-    for x in range(0,len(all_players)): 
+    for x in range(0,len(name_list)): 
        player = Player(x,clubName,name_list[x],positions_list[x],age_list[x],overall_list[x])
        listAllPlayers.append(player)
        print(name_list[x],positions_list[x],age_list[x],overall_list[x])
-       
+      
+    print('Time: %s' %clubName) 
+    if(len(name_list)<18):
+        globalErrors.append('%s - Poucos Jogadores: %s' %(clubName,len(name_list)))
+ 
     return listAllPlayers 
  
