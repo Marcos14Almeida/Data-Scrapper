@@ -2,11 +2,11 @@
 
 ## Descrição do Projeto 
 
- Arquivos em Python para extrair dados online de jogadores do banco de dados do site SoFifa e SoccerWiki, para ser usado no meu jogo de Football Manager.
+ Arquivos em Python para extrair dados online de jogadores do banco de dados dos sites "SoFifa" e "SoccerWiki" em arquivos .csv, para ser usado no meu jogo de Football Manager.
 
 ## Como usar o Projeto
 
- O arquivo pega dados dos sites e usando o BeautifulSoup do Python procura pelas tags Html com as informações necessárias de cada jogador como nome, idade, posição e potencial para salvar em um arquivo ".csv". Finalizado, seu processo os arquivos gerados poderm ser importados e usados no aplicativo.
+ O arquivo pega dados dos sites "SoFifa" e "SoccerWiki" e usando o BeautifulSoup do Python procura pelas tags Html com as informações necessárias de cada jogador como nome, idade, posição e potencial para salvar em um arquivo ".csv". Finalizado, seu processo os arquivos gerados poderm ser importados e usados no aplicativo de football manager que estou desenvolvendo com mais de 400 times sempre atualizados.
 
 ## Como Executar o projeto
 
