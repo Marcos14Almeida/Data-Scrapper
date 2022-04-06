@@ -23,8 +23,7 @@ def soFifa(siteUrl):
     
   headers={"User-Agent":'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0'}
   response = requests.get(siteUrl, headers=headers)
-  html_icerigi = response.text
-  soup = BeautifulSoup(html_icerigi, "html.parser")    
+  soup = BeautifulSoup(response.text, "html.parser") 
      
   #Attributes in HTML Code in the page   
   name = soup.find_all("a",{"role":"tooltip"})
@@ -56,17 +55,38 @@ def soFifa(siteUrl):
   for x in range (0,len(positions_list)):
       if positions_list[x].find(name_list[x]) != -1:
        positions_list[x] = positions_list[x].replace(name_list[x],'').strip()
-  
-  #SHOW RESULTS
-  print('\n----------------------------------------------------------------')
-  print('SiteUrl: %s' %siteUrl)
-  print('Time: %s' %clubName)
-  print("NÚMERO DE JOGADORES: %i\n" % len(name_list)) 
+       #Separate each position and change to desired name
+       positions = positions_list[x].split(' ')
+       string = ''
+       for position in positions:
+           string += updatePosition(position)+" "
+       positions_list[x] = string.strip()  #remove space from the end 
+           
+
   listAllPlayers = []
   for x in range(0,len(name_list)):
      player = Player(x,clubName,name_list[x],positions_list[x],age_list[x],overall_list[x])
      listAllPlayers.append(player)
-     print(name_list[x],positions_list[x],age_list[x],overall_list[x])   
-  print('Time: %s' %clubName) 
   
   return listAllPlayers   
+
+
+def updatePosition(positionName):
+       if(positionName == "GK"): positionName = "GOL"
+       if(positionName == "CB"): positionName = "ZAG"
+       if(positionName == "RB"): positionName = "LD"
+       if(positionName == "RWB"): positionName = "LD"
+       if(positionName == "LWB"): positionName = "LE"
+       if(positionName == "LB"): positionName = "LE"
+       if(positionName == "CDM"): positionName = "VOL"
+       if(positionName == "ME"): positionName = "LM"
+       if(positionName == "CM"): positionName = "MC"
+       if(positionName == "RM"): positionName = "MD"
+       if(positionName == "LM"): positionName = "ME" 
+       if(positionName == "CAM"): positionName = "MEI"
+       if(positionName == "RW"): positionName = "PD"
+       if(positionName == "LW"): positionName = "PE"
+       if(positionName == "CF"): positionName = "ATA"       
+       if(positionName == "ST"): positionName = "ATA"
+       return positionName
+   

@@ -8,15 +8,13 @@ import requests
 import re #regular expressions
 from bs4 import BeautifulSoup
 from class_player import Player
-from global_file import globalErrors
  
 #%%  
 def soccerWiki(clubID):
     siteUrl = "https://pt-br.soccerwiki.org/squad.php?clubid="+str(clubID)
     headers={"User-Agent":'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0'}
     response = requests.get(siteUrl, headers=headers)
-    html_icerigi = response.text
-    soup = BeautifulSoup(html_icerigi, "html.parser")    
+    soup = BeautifulSoup(response.text, "html.parser")    
     
 #%%  
     #Get Club Name
@@ -48,7 +46,7 @@ def soccerWiki(clubID):
     age_list = []
     for x in range(0,len(all_players)):       
       #separa overall e idade e tira da linha com o jogador   
-      overall_list.append(int(str(all_players[x][-2]+all_players[x][-1]))-7)
+      overall_list.append(int(str(all_players[x][-2]+all_players[x][-1]))-8)
       age_list.append(all_players[x][-4]+all_players[x][-3])
       all_players[x] = all_players[x][:-4]
      
@@ -59,7 +57,6 @@ def soccerWiki(clubID):
       if(all_players[x][0].isnumeric()):
         all_players[x] = all_players[x].replace(all_players[x][0],'')
       #Retira certas letras indesejadas  
-      all_players[x] = all_players[x].replace('ć','c')
       all_players[x] = all_players[x].replace('é','e')
       all_players[x] = all_players[x].replace('ó','o')
       all_players[x] = all_players[x].replace('ô','o')
@@ -73,7 +70,11 @@ def soccerWiki(clubID):
       all_players[x] = all_players[x].replace('ü','u')
       all_players[x] = all_players[x].replace('ç','c')
       all_players[x] = all_players[x].replace('č','c')
+      all_players[x] = all_players[x].replace('č','c')
+      all_players[x] = all_players[x].replace('ć','c')
       all_players[x] = all_players[x].replace('š','s')
+      all_players[x] = all_players[x].replace('ů','u')
+      all_players[x] = all_players[x].replace('ý','y')
      
 #%%        
     #Ex: WeventonG -> 'Weverto','nG,'' -> 'Weverton','G'    
@@ -82,7 +83,7 @@ def soccerWiki(clubID):
     for x in all_players:    
       positions = x.split(',')     
       name = re.split('([a-z][A-Z])',positions[0]) #() mantem os delimitadores
-      print(name)
+      #print(name)
       name[0] = name[0] +name[1][0] #junta o nome com a ultima letra que foi separada -> Se der Erro aqui é por causa de caracter invalido
       name[1] = name[1][1]+name[2] #junta o nome da posicao
       name = list(filter(None, name)) #remove espaçoes vazio
@@ -95,26 +96,63 @@ def soccerWiki(clubID):
     for rowNumber in range(0,len(positions_list)):
       string = ''   
       for x in range(0,len(positions_list[rowNumber])):
-       string += positions_list[rowNumber][x]+' '
+       positionName = positions_list[rowNumber][x]
+       positionName = updatePosition(positionName) #Função para atualizar posição desejada
+       string += positionName
+       string += ' '
       positions_list[rowNumber] = string.strip() # remove spaces at the end   
-    
-#%%       
-    #PRINT RESULT
-    #print(all_players)
-    print('\n----------------------------------------------------------------')
-    print('SiteUrl: %s' %siteUrl)
-    print('Time: %s' %clubName)
-    print("NÚMERO DE JOGADORES: %i\n" % len(name_list))
+         
     
     listAllPlayers = []
     for x in range(0,len(name_list)): 
        player = Player(x,clubName,name_list[x],positions_list[x],age_list[x],overall_list[x])
        listAllPlayers.append(player)
-       print(name_list[x],positions_list[x],age_list[x],overall_list[x])
-      
-    print('Time: %s' %clubName) 
-    if(len(name_list)<18):
-        globalErrors.append('%s - Poucos Jogadores: %s' %(clubName,len(name_list)))
  
+    #TODO: SORT PLAYERS
     return listAllPlayers 
  
+    
+ 
+#%%    
+def updatePosition(positionName):
+       if(positionName == "G"): positionName = "GOL"
+       if(positionName == "D"): positionName = "ZAG"
+       if(positionName == "D(C)"): positionName = "ZAG"
+       if(positionName == "D(DC)"): positionName = "ZAG"
+       if(positionName == "D(E)"): positionName = "LE"
+       if(positionName == "D(DE)"): positionName = "LE"
+       if(positionName == "D(DEC)"): positionName = "ZAG"
+       if(positionName == "D(EC)"): positionName = "LE"
+       if(positionName == "MD(E)"): positionName = "LE"
+       if(positionName == "D(D)"): positionName = "LD"
+       if(positionName == "MD(D)"): positionName = "LD"
+       if(positionName == "MD(DC)"): positionName = "LD"
+       if(positionName == "MD(EC)"): positionName = "MD"
+       if(positionName == "MD(DE)"): positionName = "MD"
+       if(positionName == "MD(C)"): positionName = "VOL"
+       if(positionName == "M(E)"): positionName = "ME"
+       if(positionName == "M(EC)"): positionName = "ME"
+       if(positionName == "MD"): positionName = "MD"
+       if(positionName == "M(DC)"): positionName = "MC"
+       if(positionName == "M(C)"): positionName = "MC"
+       if(positionName == "M(D)"): positionName = "MC"
+       if(positionName == "M(DE)"): positionName = "MD"
+       if(positionName == "M(DEC)"): positionName = "MEI"
+       if(positionName == "M"): positionName = "MC"
+       if(positionName == "MA(DE)"): positionName = "MEI"
+       if(positionName == "MA(DEC)"): positionName = "MEI"
+       if(positionName == "MA(DC)"): positionName = "MEI"
+       if(positionName == "MA(C)"): positionName = "MEI"
+       if(positionName == "MA(EC)"): positionName = "MEI"
+       if(positionName == "MA(D)"): positionName = "PD"
+       if(positionName == "MA(E)"): positionName = "PE"
+       if(positionName == "MA"): positionName = "ATA"
+       if(positionName == "A(C)"): positionName = "ATA"
+       if(positionName == "A(DEC)"): positionName = "ATA"
+       if(positionName == "A(DE)"): positionName = "PE"
+       if(positionName == "A(EC)"): positionName = "PE"
+       if(positionName == "A(DC)"): positionName = "ATA"
+       if(positionName == "A(D)"): positionName = "PD"
+       if(positionName == "A(E)"): positionName = "PE"
+       
+       return positionName
