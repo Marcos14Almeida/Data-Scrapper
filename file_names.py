@@ -54,23 +54,23 @@ def Inglaterra2():
 #%%
 def Inglaterra3():    
     list = [
-         "https://sofifa.com/team/1952/hull-city/",
-         "https://sofifa.com/team/1925/brentford/",
-         "https://sofifa.com/team/106/sunderland/",
-         "https://sofifa.com/team/1790/portsmouth/",
-         "https://sofifa.com/team/1939/huddersfield-town/",
-         "https://sofifa.com/team/1801/preston-north-end/",
-         "https://sofifa.com/team/97/millwall/",
-         "https://sofifa.com/team/1961/cardiff-city/",
-         
-         "https://sofifa.com/team/1917/wigan-athletic/",
-         "https://sofifa.com/team/4/bolton-wanderers/",
-         "https://sofifa.com/team/1929/plymouth-argyle/",
-         "https://sofifa.com/team/89/charlton-athletic/",
-         "https://sofifa.com/team/94/ipswich-town/",
          "https://sofifa.com/team/1919/bristol-city/",
          "https://sofifa.com/team/1926/blackpool/",
+         "https://sofifa.com/team/1925/brentford/",
+         "https://sofifa.com/team/4/bolton-wanderers/",
+         "https://sofifa.com/team/1961/cardiff-city/",
+         "https://sofifa.com/team/89/charlton-athletic/",
+         "https://sofifa.com/team/1952/hull-city/",
+         "https://sofifa.com/team/1939/huddersfield-town/",
+         
+         "https://sofifa.com/team/94/ipswich-town/",
+         "https://sofifa.com/team/97/millwall/",         
+         "https://sofifa.com/team/1929/plymouth-argyle/",
+         "https://sofifa.com/team/1790/portsmouth/",
+         "https://sofifa.com/team/1801/preston-north-end/",
+         "https://sofifa.com/team/106/sunderland/",
          "https://sofifa.com/team/1797/rotherham-united/",
+         "https://sofifa.com/team/1917/wigan-athletic/",
         ]
     
     return getListPlayers(list) 
@@ -94,30 +94,32 @@ def Espanha():
         "https://sofifa.com/team/1853/levante-union-deportiva/" ,  
         "https://sofifa.com/team/479/ca-osasuna/" ,    
         "https://sofifa.com/team/462/real-valladolid-cf/" ,  
-        "https://sofifa.com/team/100831/ad-alcorcon/" , #-> LA CORUNA 
+        "https://sofifa.com/team/453/rcd-mallorca/",
      ]      
     
     return getListPlayers(list) 
 #%%
 def Espanha2():
     list = [
-        "https://sofifa.com/team/110832/granada-cf/",
-        "https://sofifa.com/team/1968/cadiz-cf/",
-        "https://sofifa.com/team/459/real-sporting-de-gijon/",
-        "https://sofifa.com/team/463/deportivo-alaves/",
-        "https://sofifa.com/team/453/rcd-mallorca/",
-        "https://sofifa.com/team/468/elche-cf/",
-        "https://sofifa.com/team/480/rayo-vallecano/",
         "https://sofifa.com/team/1861/union-deportiva-almeria/",
-        
+        "https://sofifa.com/team/10846/burgos-cf/",
+        "https://sofifa.com/team/1968/cadiz-cf/",
+        "https://sofifa.com/team/463/deportivo-alaves/",
+        "https://sofifa.com/team/467/sd-eibar/",
+        "https://sofifa.com/team/468/elche-cf/",
+        "https://sofifa.com/team/110832/granada-cf/",
+        "https://sofifa.com/team/113981/ud-ibiza/",        
         "https://sofifa.com/team/472/union-deportiva-las-palmas/",
-        "https://sofifa.com/team/244/real-zaragoza/",
-        "https://sofifa.com/team/113981/ud-ibiza/",
-        "https://sofifa.com/team/573/malaga-cf/",
+        
         "https://sofifa.com/team/110062/girona-fc/",
         "https://sofifa.com/team/100888/cd-leganes/",
+        "https://sofifa.com/team/100831/ad-alcorcon/" , #-> LA CORUNA 
+        "https://sofifa.com/team/573/malaga-cf/",
+        "https://sofifa.com/team/480/rayo-vallecano/",
+        "https://sofifa.com/team/110827/real-oviedo/",
+        "https://sofifa.com/team/459/real-sporting-de-gijon/",
         "https://sofifa.com/team/260/cd-tenerife/",
-        "https://sofifa.com/team/467/sd-eibar/",
+        "https://sofifa.com/team/244/real-zaragoza/",
      ]      
     
     return getListPlayers(list) 
@@ -147,19 +149,27 @@ def Italia():
 #%%
 def Italia2():  
     list = [
+        "95", #Ascoli
+        "97", #Bari
+        "https://sofifa.com/team/112026/benevento/",
+        "99", #Brescia
+        "1671", #Como
+        "479", #Cremonese
+        "https://sofifa.com/team/110734/crotone/",
+        "https://sofifa.com/team/1746/empoli/",
+        
+        "858", #Frosinone
+        "https://sofifa.com/team/206/hellas-verona/",
         "https://sofifa.com/team/347/lecce/",
         "https://sofifa.com/team/111811/ac-monza/",
-        "https://sofifa.com/team/112026/benevento/",
-        "https://sofifa.com/team/206/hellas-verona/",
-        "https://sofifa.com/team/110741/spezia/",
-        "https://sofifa.com/team/1746/empoli/",
-        "https://sofifa.com/team/205/venezia-fc/",
-        "https://sofifa.com/team/110734/crotone/",
-        
-        "99", #Brescia
-        "872", #Pisa
+        "117", #Palermo
         "119", #Perugia
+        "872", #Pisa
         "1467", #SPAL
+        
+        "https://sofifa.com/team/110741/spezia/",
+        "134", #Vicenza
+        "https://sofifa.com/team/205/venezia-fc/",
         ]
     
     return getListPlayers(list) 
@@ -189,15 +199,23 @@ def Alemanha():
 #%%
 def Alemanha2():  
     list = [
-         "https://sofifa.com/team/169/1-fsv-mainz-05/",
-         "https://sofifa.com/team/1831/1-fc-union-berlin/",
          "https://sofifa.com/team/159/dsc-arminia-bielefeld/",
-         "https://sofifa.com/team/171/1-fc-nurnberg/",
-         "https://sofifa.com/team/110329/fc-st-pauli/",
-         "https://sofifa.com/team/29/1-fc-kaiserslautern/",
+         "https://sofifa.com/team/160/vfl-bochum-1848/",
+         "https://sofifa.com/team/110502/sv-darmstadt-98/",
          "https://sofifa.com/team/503/sg-dynamo-dresden/",
          "https://sofifa.com/team/110636/fortuna-dusseldorf/",
+         "https://sofifa.com/team/165/spvgg-greuther-furth/",
+         "https://sofifa.com/team/27/fc-hansa-rostock/",
          "https://sofifa.com/team/485/hannover-96/",
+         
+         "https://sofifa.com/team/111235/1-fc-heidenheim-1846/",
+         "https://sofifa.com/team/1832/karlsruher-sc/",
+         "https://sofifa.com/team/29/1-fc-kaiserslautern/",
+         "https://sofifa.com/team/169/1-fsv-mainz-05/",
+         "https://sofifa.com/team/171/1-fc-nurnberg/",
+         "https://sofifa.com/team/10030/sc-paderborn-07/",
+         "https://sofifa.com/team/110329/fc-st-pauli/",
+         "https://sofifa.com/team/1831/1-fc-union-berlin/",
         ]
     
     return getListPlayers(list) 
@@ -227,22 +245,29 @@ def França():
 #%%
 def França2():  
     list = [
-        "https://sofifa.com/team/378/stade-brestois-29/",
+        "https://sofifa.com/team/614/ac-ajaccio/",
         "https://sofifa.com/team/1530/angers-sco/",
-        "https://sofifa.com/team/217/fc-lorient/",
-        "https://sofifa.com/team/1815/clermont-foot-63/",
-        "https://sofifa.com/team/294/estac-troyes/",        
-        "https://sofifa.com/team/57/aj-auxerre/",
-        "https://sofifa.com/team/1809/toulouse-football-club/",
-        "https://sofifa.com/team/210/stade-malherbe-caen/",
-        
         "https://sofifa.com/team/1816/amiens-sc/",
-        "https://sofifa.com/team/110569/dijon-fco/",
+        "https://sofifa.com/team/57/aj-auxerre/",
+        "https://sofifa.com/team/378/stade-brestois-29/",
+        "https://sofifa.com/team/210/stade-malherbe-caen/",
+        "https://sofifa.com/team/1815/clermont-foot-63/",
+        "https://sofifa.com/team/110569/dijon-fco/",    
+        "https://sofifa.com/team/62/en-avant-de-guingamp/",
+        
+        "https://sofifa.com/team/217/fc-lorient/",
+        "https://sofifa.com/team/1823/as-nancy-lorraine/",
+        "https://sofifa.com/team/1738/le-havre-ac/",
+        "https://sofifa.com/team/1805/grenoble-foot-38/",
+        "https://sofifa.com/team/226/fc-sochaux-montbeliard/",
+        "https://sofifa.com/team/294/estac-troyes/",    
+        "https://sofifa.com/team/1809/toulouse-football-club/",
+        "https://sofifa.com/team/110456/valenciennes-fc/",
         ]
     
     return getListPlayers(list) 
 #%%
-def PTHolanda(): 
+def Portugal(): 
     list = [
         "https://sofifa.com/team/234/sl-benfica/" ,
         "https://sofifa.com/team/237/sporting-cp/" ,
@@ -253,7 +278,19 @@ def PTHolanda():
         "https://sofifa.com/team/1893/clube-sport-maritimo/" ,
         "https://sofifa.com/team/10031/portimonense-sc/" ,
         
-        
+        "https://sofifa.com/team/1892/fc-pacos-de-ferreira/",
+        "https://sofifa.com/team/112809/futebol-clube-de-famalicao/",
+        "https://sofifa.com/team/1888/gil-vicente-fc/",
+        "https://sofifa.com/team/10020/estoril-praia/",
+        "https://sofifa.com/team/1889/belenenses-sad/",
+        "https://sofifa.com/team/1900/moreirense-fc/",
+        "214", #Coimbra
+        ]
+    
+    return getListPlayers(list)  
+#%%
+def HolandaBelgica(): 
+    list = [
         "https://sofifa.com/team/245/ajax/" ,
         "https://sofifa.com/team/247/psv/" ,
         "https://sofifa.com/team/246/feyenoord/" ,
@@ -262,34 +299,95 @@ def PTHolanda():
         "https://sofifa.com/team/1909/vitesse/" ,
         "https://sofifa.com/team/1903/fc-utrecht/" ,
         "https://sofifa.com/team/1913/sc-heerenveen/" ,
-        ]
-    
-    return getListPlayers(list)  
-#%%
-def EuropaOcidental(): 
-    list = [
-        "https://sofifa.com/team/78/celtic/" ,
-        "https://sofifa.com/team/86/rangers-fc/" ,
-        "https://sofifa.com/team/298/rosenborg-bk/" ,
-        "https://sofifa.com/team/320/malmo-ff/" ,
-        "https://sofifa.com/team/819/fc-kobenhavn/",
-        "https://sofifa.com/team/1516/fc-midtjylland/",
-        "https://sofifa.com/team/100325/hjk-helsinki/",
-        "https://sofifa.com/team/191/fc-red-bull-salzburg/",
+        "https://sofifa.com/team/1915/fc-groningen/",
+        "https://sofifa.com/team/100646/sparta-rotterdam/",
         
-        "https://sofifa.com/team/254/sk-rapid-wien/",
-        "https://sofifa.com/team/896/fc-basel-1893/",
-        "https://sofifa.com/team/900/bsc-young-boys/",
-        "https://sofifa.com/team/894/fc-zurich/",
         "https://sofifa.com/team/673/krc-genk/",    
         "https://sofifa.com/team/231/club-brugge-kv/", 
         "https://sofifa.com/team/232/standard-de-liege/", 
-        "https://sofifa.com/team/229/rsc-anderlecht/", 
+        "https://sofifa.com/team/229/rsc-anderlecht/",
+        "https://sofifa.com/team/674/kaa-gent/", #Gent
+        "https://sofifa.com/team/230/royal-antwerp-fc/", 
+        "https://sofifa.com/team/110724/kv-mechelen/",
+        ]
+    
+    return getListPlayers(list) 
+#%%
+def EuropaOcidental(): 
+    list = [
+        #ESCÓCIA
+        "https://sofifa.com/team/78/celtic/" ,
+        "https://sofifa.com/team/86/rangers-fc/" ,       
+        "https://sofifa.com/team/81/hibernian/",
+        "https://sofifa.com/team/77/aberdeen/",
+        #SUIÇA
+        "https://sofifa.com/team/896/fc-basel-1893/",
+        "https://sofifa.com/team/900/bsc-young-boys/",
+        "https://sofifa.com/team/894/fc-zurich/",
+        "https://sofifa.com/team/10032/fc-lugano/",
+        "https://sofifa.com/team/322/grasshopper-club-zurich/",
+        #AUSTRIA
+        "https://sofifa.com/team/191/fc-red-bull-salzburg/",      
+        "https://sofifa.com/team/252/lask-linz/",
+        "https://sofifa.com/team/254/sk-rapid-wien/",
+        "https://sofifa.com/team/209/sk-sturm-graz/",  
+        "https://sofifa.com/team/256/fk-austria-wien/",
+        #POLONIA
+        "https://sofifa.com/team/1871/legia-warszawa/",
+        "https://sofifa.com/team/873/lech-poznan/",   
+        "https://sofifa.com/team/110747/cracovia/",
+        "https://sofifa.com/team/1873/wisla-krakow/",
         ]
     
     return getListPlayers(list)  
 #%%
-def LesteEuropeu(): 
+def Nordicos(): 
+    list = [
+        #NORUEGA
+        "https://sofifa.com/team/298/rosenborg-bk/" ,
+        "https://sofifa.com/team/417/molde-fk/", #molde
+        "https://sofifa.com/team/918/fk-bodoglimt/", #Bodø/Glimt
+        #SUÉCIA
+        "https://sofifa.com/team/320/malmo-ff/" ,
+        "https://sofifa.com/team/433/aik/",
+        "https://sofifa.com/team/708/hammarby-if/",
+        "https://sofifa.com/team/319/ifk-goteborg/",
+        #DINAMARCA
+        "https://sofifa.com/team/819/fc-kobenhavn/",
+        "https://sofifa.com/team/1516/fc-midtjylland/",
+        "https://sofifa.com/team/269/brondby-if/",
+        "https://sofifa.com/team/820/aalborg-bk/",
+        "https://sofifa.com/team/1786/randers-fc/",
+        "https://sofifa.com/team/272/odense-boldklub/",
+        #FINLANDIA
+        "https://sofifa.com/team/100325/hjk-helsinki/",
+        ]
+    
+    return getListPlayers(list)  
+ #%%
+def TurquiaGrecia(): 
+     list = [
+         #TURQUIA
+         "351", #Galatasaray
+         "349", #Besiktas
+         "350", #Fenerbahce
+         "https://sofifa.com/team/436/trabzonspor/",
+         "https://sofifa.com/team/101014/istanbul-basaksehir-fk/", 
+         "https://sofifa.com/team/101041/demir-grup-sivasspor/",
+         "https://sofifa.com/team/741/antalyaspor/",
+         #GRECIA
+         "373", #Olympiakos
+         "https://sofifa.com/team/393/paok/",
+         "https://sofifa.com/team/278/aek-athens/",
+         "762", #Aris         
+         "https://sofifa.com/team/1884/panathinaikos-fc/",
+         
+         "719", #Apoel         
+         ]
+
+     return getListPlayers(list)
+#%%
+def URSS(): 
     list = [
         "265", #Zenit
         "263", #Spartak
@@ -300,61 +398,54 @@ def LesteEuropeu():
         "260", #Rubin Kazan        
         "4605", #Sochi  
 
-        "381", #Partizan
-        "380", #Estrela Vermelha
         "348", #Shaktar
         "347", #Dinamo Kiev
-        "1763", #Ludogorets
-        "360", #CSKA Sofia
+        "1539", #Dnipro
+        "609", #Metalist
         "1395", #Sheriff Tiraspol
         "1105", #BATE     
+        "1508", #Astana  
+        "1539", #Qarabag
         ]
 
     return getListPlayers(list) 
+
  #%%
-def OutrosEuropa(): 
+def LesteEuropeu(): 
      list = [
-         "351", #Galatasaray
-         "349", #Besiktas
-         "350", #Fenerbahce
-         "https://sofifa.com/team/436/trabzonspor/",
-         "https://sofifa.com/team/101014/istanbul-basaksehir-fk/", 
-         "373", #Olympiakos
-         "https://sofifa.com/team/393/paok/",
-         "https://sofifa.com/team/278/aek-athens/",
-         
-         "https://sofifa.com/team/1884/panathinaikos-fc/",
+         #CROACIA
          "365", #D. Zagreb
-         "719", #Apoel         
+         "941",  #Rijeka
+         "https://sofifa.com/team/263/hajduk-split/",
+         #ROMENIA
          "https://sofifa.com/team/100761/fcsb-steaua/",
          "https://sofifa.com/team/110816/cfr-cluj/",
+         #REP.TCHECA
          "369", #Sparta Praga
          "https://sofifa.com/team/266/sk-slavia-praha/",
-         "605", #Maccabi Tel-Aviv
+         "https://sofifa.com/team/110468/fc-viktoria-plzen/",
+         
+         #HUNGRIA
+         "1416", #Ferencvaros
+         "1023", #Honved
+         "2592", #Puskas
+         "1014", #Ujpest
+         #BULGARIA
+         "1763", #Ludogorets
+         "360", #CSKA Sofia
+         #SERVIA         
+         "381", #Partizan
+         "380", #Estrela Vermelha
          ]
 
      return getListPlayers(list)
  
-def OutrosEuropa2(): 
-     list = [
-         "https://sofifa.com/team/674/kaa-gent/", #Gent
-         "https://sofifa.com/team/230/royal-antwerp-fc/",
-         "https://sofifa.com/team/1871/legia-warszawa/",
-         "https://sofifa.com/team/873/lech-poznan/",         
-         "https://sofifa.com/team/252/lask-linz/",
-         "https://sofifa.com/team/209/sk-sturm-graz/",         
-         "https://sofifa.com/team/81/hibernian/",
-         "https://sofifa.com/team/110468/fc-viktoria-plzen/", 
-         
+def EuropaOutros(): 
+     list = [          
          "1166", #Maribor    
          "1062", #Vardar
-         "1508", #Astana  
          "807", #Slovan Bratislava
-         "1539", #Qarabag
-         "https://sofifa.com/team/918/fk-bodoglimt/", #Bodø/Glimt
-         "https://sofifa.com/team/417/molde-fk/", #molde
-         "https://sofifa.com/team/269/brondby-if/",
-         "https://sofifa.com/team/256/fk-austria-wien/",
+         "605", #Maccabi Tel-Aviv         
          ]
 
      return getListPlayers(list)
@@ -413,35 +504,40 @@ def Brasil3():
          "2455", #Ituano
          "3481", #Novorizontino
          "2813", #Mirassol
-         "2395", #Sampaio Corrêa
+         "1785", #ABC
          "2814", #CSA
          "2015", #CRB
-         "1785", #ABC
-         "2881", #Londrina
+         "603", #Santa Cruz
+         "2395", #Sampaio Corrêa
          
+         "1414", #Avaí
+         "2881", #Londrina
          "2848", #Operário
          "2478", #Brasil de Pelotas
          "2476", #Remo
          "302",  #Paysandu
          "5536", #Manaus
          "1457", #Vila Nova
-         "1414", #Avaí
-         "603", #Santa Cruz
          ]
 
      return getListPlayers(list)    
  #%%
 def Brasil4(): 
      list = [
-         "3005", #Tombense
          "3017", #Botafogo-PB
          "2802", #Botafogo-SP
+         "4483", #Brusque
+         "2014", #Caxias do Sul
          "3506", #Confiança
          "2396", #Campinense
-         "1419", #Santo André
          "3426", #Ferroviária
+         "2813", #Mirassol
+         "289", #Brasiliense
+         
+         "1232", #Portuguesa
          "305", #São Caetano
-         "2014", #Caxias do Sul
+         "1419", #Santo André
+         "3005", #Tombense
          ]
 
      return getListPlayers(list)   
@@ -468,38 +564,74 @@ def Argentina():
         ]
     
     return getListPlayers(list) 
+ #%%
+def Argentina2(): 
+     list = [        
+         "https://sofifa.com/team/111711/club-atletico-huracan/", #Huracan
+         "https://sofifa.com/team/111706/godoy-cruz/",
+         "https://sofifa.com/team/111708/atletico-tucuman/",
+         "https://sofifa.com/team/101084/gimnasia-y-esgrima-la-plata/",
+         "https://sofifa.com/team/111716/union-de-santa-fe/",
+         "https://sofifa.com/team/112689/platense/",
+         "https://sofifa.com/team/111707/club-atletico-aldosivi/",
+         "https://sofifa.com/team/112965/club-atletico-central-cordoba/", 
+         
+         "https://sofifa.com/team/110581/patronato/",
+         ]
+
+     return getListPlayers(list)      
 #%%
 def SulAmericano(): 
     list = [
+        #URUGUAI
         "376", #Penarol
         "375", #Nacional-URU
+        "2409", #Montevideo   
+        "1011", #River Plate-URU
+        "623", #Danubio
+        "624", #Defensor
+        #PARAGUAI
         "613", #Olimpia
         "615", #Cerro
         "616", #Libertad
+        "617", #Club Guaraní
+
+        #CHILE
+        "https://sofifa.com/team/112671/club-nacional/", #Nacional -PAR
         "362", #colo-colo
         "364", #laU
-        "363", #Catolica
-        
-        "1238", #Bolivar  
-        "https://sofifa.com/team/110969/club-the-strongest/",
-        "509", #Sporting Cristal
-        "621", #Alianza Lima
-        "https://sofifa.com/team/111014/club-universitario-de-deportes/",
-        "https://sofifa.com/team/111334/fbc-melgar/",
-        "896", #Cienciano
-        "https://sofifa.com/team/113143/montevideo-city-torque/",
-        
-        "617", #Club Guaraní
-        "https://sofifa.com/team/112671/club-nacional/", #Nacional -PAR
-        "https://sofifa.com/team/110974/club-deportivo-jorge-wilstermann/",
-        "https://sofifa.com/team/114577/club-always-ready/",
+        "363", #Catolica  
+        "978", #Union Espanola
         "https://sofifa.com/team/112535/union-la-calera/",
         "https://sofifa.com/team/111328/club-deportivo-palestino/",
+        "https://sofifa.com/team/111327/cd-huachipato/",
+        "974", #Everton-CHI
         ]
 
     return getListPlayers(list)
 #%%
-def Colombia(): 
+def SulAmericano2(): 
+    list = [       
+        #PERU
+        "509", #Sporting Cristal
+        "621", #Alianza Lima
+        "https://sofifa.com/team/111014/club-universitario-de-deportes/",
+        "896", #Cienciano   
+        "https://sofifa.com/team/110974/club-deportivo-jorge-wilstermann/",
+        "https://sofifa.com/team/111334/fbc-melgar/",
+        "https://sofifa.com/team/111016/sport-boys/",
+        
+        #BOLIVIA
+        "1238", #Bolivar  
+        "https://sofifa.com/team/110969/club-the-strongest/",
+        "https://sofifa.com/team/114577/club-always-ready/",
+        "5728", #Independiente petrolero
+        "1407", #Oriente Petrolero
+        ]
+
+    return getListPlayers(list)    
+#%%
+def Merconorte(): 
     list = [
         "620", #América de Cali
         "912", #Atlético Nacional
@@ -509,37 +641,33 @@ def Colombia():
         "619", #Once Caldas
         "618", #Millonarios
         "916", #Santa fé
-        
+        "https://sofifa.com/team/112523/la-equidad/",        
         "917", #Tolima
+        
+        #EQUADOR
         "1562", #Del Valle
         "656", #LDU
         "886", #Emelec
         "658", #Barcelona-EQU
+        "2547", #Guayaquil City
+        "1359", #Univ. Católica Ecuador
+
+        #VENEZUELA
         "1211", #Caracas
         "https://sofifa.com/team/110990/deportivo-tachira-fc/",
+        "https://sofifa.com/team/112853/deportivo-la-guaira-fc/",
+        "https://sofifa.com/team/111332/estudiantes-de-merida/",
+        "https://sofifa.com/team/112914/metropolitanos-de-caracas-fc/",
         ]
 
     return getListPlayers(list)
- #%%
-def OutrosAmericaSul(): 
-     list = [
-         "1232", #Portuguesa
-         
-         "https://sofifa.com/team/111328/club-deportivo-palestino/",
-        
-         "https://sofifa.com/team/111711/club-atletico-huracan/", #Huracan
-         "https://sofifa.com/team/111706/godoy-cruz/",
-         "https://sofifa.com/team/111708/atletico-tucuman/",
-         "https://sofifa.com/team/101084/gimnasia-y-esgrima-la-plata/",
-         "https://sofifa.com/team/111716/union-de-santa-fe/",
-             
-         ]
 
-     return getListPlayers(list)  
+###################################################
+###################################################
+###################################################
 #%% 
 def Mexico(): 
      list = [
-         
          "439", #América
          "444", #Chivas
          "443", #Cruz Azul
@@ -603,62 +731,86 @@ def MLS2():
 #%%
 def Asia(): 
     list = [
+        #CHINA
         "2288", #Shanghai
         "1521", #Ghuangzou
         "1068", #Shandong
+        "https://sofifa.com/team/111768/beijing-guoan-fc/",
+        #JAPÃO
         "517", #Urawa
         "527", #Kawasaki
         "518", #Kashima
         "1079", #Vissel Kobe
-        "1059", #Pohang Steelers
-        
-        "680", #Jeonbuk Hyundai
-        "1323", #Al-Ain
-        "1252", #Al-Sadd
-        "https://sofifa.com/team/605/al-hilal/", #Al-Hilal
-        "https://sofifa.com/team/112139/al-nassr/", #Al-Nassr
-        "https://sofifa.com/team/112387/al-ahli/", #Al-Ahli
-        "1610", #Al-Duhail
-        "1347", #Al-Jazira
+        "https://sofifa.com/team/101150/fc-tokyo/",
+        "https://sofifa.com/team/101148/cerezo-osaka/",
+        "https://sofifa.com/team/112093/gamba-osaka/",
+        "https://sofifa.com/team/101145/kashiwa-reysol/",
+        "https://sofifa.com/team/101151/yokohama-f-marinos/",
+        "https://sofifa.com/team/112092/nagoya-grampus/",
+        "https://sofifa.com/team/113157/sanfrecce-hiroshima/",
+        #COREIA
+        "1059", #Pohang Steelers        
+        "https://sofifa.com/team/1477/jeonbuk-hyundai-motors/", #Jeonbuk Hyundai
+        "https://sofifa.com/team/982/fc-seoul/",
+        "https://sofifa.com/team/983/suwon-samsung-bluewings/",
+        "681", #Ulsan Hyundai
+        "https://sofifa.com/team/110765/incheon-united-fc/",
+         #TAILANDIA
+         "1943", #Buriram United
         ]
 
     return getListPlayers(list)
 #%%
-def Asia2(): 
-     list = [
-         "https://sofifa.com/team/101150/fc-tokyo/",
-         "https://sofifa.com/team/101148/cerezo-osaka/",
-         "https://sofifa.com/team/112093/gamba-osaka/",
-         "https://sofifa.com/team/101145/kashiwa-reysol/",
-         "https://sofifa.com/team/101151/yokohama-f-marinos/",
-         "https://sofifa.com/team/982/fc-seoul/",
-         "https://sofifa.com/team/983/suwon-samsung-bluewings/",
-         
-         "681", #Ulsan Hyundai
+def OrienteMedio(): 
+     list = [  
+         #ARABIA SAUDITA
+         "https://sofifa.com/team/605/al-hilal/", #Al-Hilal
+         "https://sofifa.com/team/112139/al-nassr/", #Al-Nassr
+         "https://sofifa.com/team/112387/al-ahli/", #Al-Ahli
          "https://sofifa.com/team/607/al-ittihad/",
          "https://sofifa.com/team/111674/al-shabab/",
-         "685", #Persepolis
-         "https://sofifa.com/team/111397/melbourne-victory/",
-         "https://sofifa.com/team/111400/sydney-fc/",
+         #QATAR
+         "1610", #Al-Duhail
+         "1252", #Al-Sadd
+         "691", #Al-Rayyan
+         #EAU
+         "1347", #Al-Jazira
          "1324", #Al Wahda
-         "1943", #Buriram United
-         "https://sofifa.com/team/111768/beijing-guoan-fc/",
+         "1323", #Al-Ain
+         #IRÃ
+          "685", #Persepolis
          ]
 
      return getListPlayers(list) 
  #%%
 def Africa(): 
      list = [         
+         #NORTE AFRICA
          "522", #Al-Ahly
          "521", #Zamalek
          "573", #Raja Casablanca
+         "570", #Wydad
+         "564", #Espérance de Tunis
+         #AFRICA
+         "549", #Mamelodi Sundown
          "https://sofifa.com/team/110929/kaizer-chiefs/",
          "https://sofifa.com/team/110930/orlando-pirates/",
          "1205", #Mazembe
-         "564", #Espérance de Tunis
-         "570", #Wydad
-         "549", #Mamelodi Sundown
          "3010", #1º de Agosto
          ]
 
      return getListPlayers(list)  
+#%%
+def Oceania(): 
+     list = [         
+         #OCEANIA
+         "https://sofifa.com/team/111397/melbourne-victory/",
+         "https://sofifa.com/team/111400/sydney-fc/",
+         "https://sofifa.com/team/112224/melbourne-city-fc/",
+         "https://sofifa.com/team/112427/western-sydney-wanderers/",
+         "https://sofifa.com/team/111393/adelaide-united/",
+         "1886", #Auckland City
+         ]
+
+     return getListPlayers(list)  
+ 

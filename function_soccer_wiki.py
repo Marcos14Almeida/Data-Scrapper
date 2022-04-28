@@ -8,6 +8,7 @@ import requests
 import re #regular expressions
 from bs4 import BeautifulSoup
 from class_player import Player
+
  
 #%%  
 def soccerWiki(clubID):
@@ -24,6 +25,20 @@ def soccerWiki(clubID):
         clubName.append(x.text) 
     clubName = clubName[0]
     
+    #GET NATIONALITY from flag image
+    #https://stackoverflow.com/questions/43814754/python-beautifulsoup-how-to-get-href-attribute-of-a-element
+    #https://stackoverflow.com/questions/55413046/beautifulsoap-get-multiple-element-for-all-img-in-a-div-with-specific-class
+    images_box = soup.find_all('div', attrs={'class': 'd-inline'})
+    nationalities = []    
+    for a in images_box:
+        imageCountryHTML = a.find('a')
+        imageCountryStr = str(imageCountryHTML)
+        imageCountryStr = imageCountryStr[imageCountryStr.find('title='):imageCountryStr.find('\"><span')]
+        imageCountryStr = imageCountryStr[imageCountryStr.find('\"'):]
+        imageCountryStr = imageCountryStr[1:]
+        nationalities.append(imageCountryStr)
+    #print(nationalities)
+
     #Get Table Info
     soupInfos = soup.find_all("tr")
     all_table_list = [] 
@@ -39,7 +54,7 @@ def soccerWiki(clubID):
         if(x[0].isnumeric()):
          all_players.append(x)
         else:
-            break
+            break   
         
 #%%          
     overall_list = []
@@ -57,21 +72,23 @@ def soccerWiki(clubID):
       if(all_players[x][0].isnumeric()):
         all_players[x] = all_players[x].replace(all_players[x][0],'')
       #Retira certas letras indesejadas  
-      all_players[x] = all_players[x].replace('é','e')
-      all_players[x] = all_players[x].replace('ó','o')
-      all_players[x] = all_players[x].replace('ô','o')
+      all_players[x] = all_players[x].replace('ò','a')
       all_players[x] = all_players[x].replace('ã','a')
       all_players[x] = all_players[x].replace('ă','a')
       all_players[x] = all_players[x].replace('á','a')
+      all_players[x] = all_players[x].replace('é','e')
       all_players[x] = all_players[x].replace('è','e')
       all_players[x] = all_players[x].replace('ê','e')
       all_players[x] = all_players[x].replace('í','i')
+      all_players[x] = all_players[x].replace('ó','o')
+      all_players[x] = all_players[x].replace('ô','o')
       all_players[x] = all_players[x].replace('ú','u')
       all_players[x] = all_players[x].replace('ü','u')
       all_players[x] = all_players[x].replace('ç','c')
       all_players[x] = all_players[x].replace('č','c')
       all_players[x] = all_players[x].replace('č','c')
       all_players[x] = all_players[x].replace('ć','c')
+      all_players[x] = all_players[x].replace('ń','n')
       all_players[x] = all_players[x].replace('š','s')
       all_players[x] = all_players[x].replace('ů','u')
       all_players[x] = all_players[x].replace('ý','y')
@@ -105,7 +122,7 @@ def soccerWiki(clubID):
     
     listAllPlayers = []
     for x in range(0,len(name_list)): 
-       player = Player(x,clubName,name_list[x],positions_list[x],age_list[x],overall_list[x])
+       player = Player(x,clubName,name_list[x],positions_list[x],age_list[x],overall_list[x],nationalities[x])
        listAllPlayers.append(player)
  
     #TODO: SORT PLAYERS
@@ -116,43 +133,44 @@ def soccerWiki(clubID):
 #%%    
 def updatePosition(positionName):
        if(positionName == "G"): positionName = "GOL"
-       if(positionName == "D"): positionName = "ZAG"
-       if(positionName == "D(C)"): positionName = "ZAG"
-       if(positionName == "D(DC)"): positionName = "ZAG"
-       if(positionName == "D(E)"): positionName = "LE"
-       if(positionName == "D(DE)"): positionName = "LE"
-       if(positionName == "D(DEC)"): positionName = "ZAG"
-       if(positionName == "D(EC)"): positionName = "LE"
-       if(positionName == "MD(E)"): positionName = "LE"
-       if(positionName == "D(D)"): positionName = "LD"
-       if(positionName == "MD(D)"): positionName = "LD"
-       if(positionName == "MD(DC)"): positionName = "LD"
-       if(positionName == "MD(EC)"): positionName = "MD"
-       if(positionName == "MD(DE)"): positionName = "MD"
-       if(positionName == "MD(C)"): positionName = "VOL"
-       if(positionName == "M(E)"): positionName = "ME"
-       if(positionName == "M(EC)"): positionName = "ME"
-       if(positionName == "MD"): positionName = "MD"
-       if(positionName == "M(DC)"): positionName = "MC"
-       if(positionName == "M(C)"): positionName = "MC"
-       if(positionName == "M(D)"): positionName = "MC"
-       if(positionName == "M(DE)"): positionName = "MD"
-       if(positionName == "M(DEC)"): positionName = "MEI"
-       if(positionName == "M"): positionName = "MC"
-       if(positionName == "MA(DE)"): positionName = "MEI"
-       if(positionName == "MA(DEC)"): positionName = "MEI"
-       if(positionName == "MA(DC)"): positionName = "MEI"
-       if(positionName == "MA(C)"): positionName = "MEI"
-       if(positionName == "MA(EC)"): positionName = "MEI"
-       if(positionName == "MA(D)"): positionName = "PD"
-       if(positionName == "MA(E)"): positionName = "PE"
-       if(positionName == "MA"): positionName = "ATA"
-       if(positionName == "A(C)"): positionName = "ATA"
-       if(positionName == "A(DEC)"): positionName = "ATA"
-       if(positionName == "A(DE)"): positionName = "PE"
-       if(positionName == "A(EC)"): positionName = "PE"
-       if(positionName == "A(DC)"): positionName = "ATA"
-       if(positionName == "A(D)"): positionName = "PD"
-       if(positionName == "A(E)"): positionName = "PE"
+       elif(positionName == "D"): positionName = "ZAG"
+       elif(positionName == "D(C)"): positionName = "ZAG"
+       elif(positionName == "D(DEC)"): positionName = "ZAG"
+       elif(positionName == "D(E)"): positionName = "LE"
+       elif(positionName == "D(DE)"): positionName = "LE"
+       elif(positionName == "D(EC)"): positionName = "LE"
+       elif(positionName == "MD(E)"): positionName = "LE"
+       elif(positionName == "D(D)"): positionName = "LD"
+       elif(positionName == "MD(D)"): positionName = "LD"
+       elif(positionName == "MD(DC)"): positionName = "LD"
+       elif(positionName == "D(DC)"): positionName = "LD"
+       elif(positionName == "M(E)"): positionName = "LE"
+       elif(positionName == "M(D)"): positionName = "LD"
+       elif(positionName == "MD(EC)"): positionName = "MC"
+       elif(positionName == "MD(DE)"): positionName = "MC"
+       elif(positionName == "MD(C)"): positionName = "VOL"
+       elif(positionName == "M(EC)"): positionName = "ME"
+       elif(positionName == "MD"): positionName = "MD"
+       elif(positionName == "M(DC)"): positionName = "MC"
+       elif(positionName == "M(C)"): positionName = "MC"
+       elif(positionName == "M(DE)"): positionName = "MD"
+       elif(positionName == "M(DEC)"): positionName = "MEI"
+       elif(positionName == "M"): positionName = "MC"
+       elif(positionName == "MA(DE)"): positionName = "MEI"
+       elif(positionName == "MA(DEC)"): positionName = "MEI"
+       elif(positionName == "MA(DC)"): positionName = "MEI"
+       elif(positionName == "MA(C)"): positionName = "MEI"
+       elif(positionName == "MA(EC)"): positionName = "MEI"
+       elif(positionName == "MA(D)"): positionName = "PD"
+       elif(positionName == "MA(E)"): positionName = "PE"
+       elif(positionName == "MA"): positionName = "ATA"
+       elif(positionName == "A(C)"): positionName = "ATA"
+       elif(positionName == "A(DEC)"): positionName = "ATA"
+       elif(positionName == "A(DC)"): positionName = "ATA"
+       elif(positionName == "A(DE)"): positionName = "PE"
+       elif(positionName == "A(EC)"): positionName = "PE"
+       elif(positionName == "A(E)"): positionName = "PE"
+       elif(positionName == "A(D)"): positionName = "PD"
+       else: positionName = "ATA"
        
        return positionName

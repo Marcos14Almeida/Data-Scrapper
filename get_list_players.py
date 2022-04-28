@@ -74,12 +74,22 @@ def addTeamPlayers(clubNameError):
     additionalUrl = ""
     
     #Place here original team name from Url Database
-    if(clubNameError == 'Figueirense'):
+    if(clubNameError == 'FC Krasnodar'):
+        additionalUrl = '5535' #Veles Moskva
+    elif(clubNameError == 'FC Astana'):
+        additionalUrl = '2192' #FC Kaisar
+    elif(clubNameError == 'BATE'):
+        additionalUrl = '1106' #Neman Grodno
+    elif(clubNameError == 'FK Vardar'):
+        additionalUrl = '4846' #Skopje  
+    elif(clubNameError == 'Figueirense'):
         additionalUrl = '4764' #Sergipe
     elif(clubNameError == 'Paraná Clube'):
         additionalUrl = '2797'
     elif(clubNameError == 'Ferroviária'):
         additionalUrl = '4794' #Fluminense de Feira
+    elif(clubNameError == 'Brasiliense'):
+        additionalUrl = '3249' #Anapolina
     elif(clubNameError == 'São Caetano'):
         additionalUrl = '2801' #Tupi
     elif(clubNameError == 'Mirassol FC'):
@@ -94,6 +104,8 @@ def addTeamPlayers(clubNameError):
         additionalUrl = '5581' #floresta
     elif(clubNameError == 'Campinense Clube'):
         additionalUrl = '4758' #altos
+    elif(clubNameError == 'Manaus FC'):
+        additionalUrl = '2216' #aguia maraba
     elif(clubNameError == 'Al Ain'):
         additionalUrl = '1346'
     elif(clubNameError == 'Al Duhail SC'):
@@ -102,30 +114,24 @@ def addTeamPlayers(clubNameError):
         additionalUrl = '1408'
     elif(clubNameError == 'Al Jazira'):
         additionalUrl = '1253'
-    elif(clubNameError == 'Raja Casablanca'):
-        additionalUrl = '1944'
     elif(clubNameError == 'Persepolis'):
         additionalUrl = '1394'
-    elif(clubNameError == 'FC Krasnodar'):
-        additionalUrl = '5535' #Veles Moskva
-    elif(clubNameError == 'Manaus FC'):
-        additionalUrl = '2216' #aguia maraba
-    elif(clubNameError == 'FK Vardar'):
-        additionalUrl = '4846' #Skopje  
+    elif(clubNameError == 'Al Wahda'):
+        additionalUrl = '1432' #Ajman Club
+    elif(clubNameError == 'Al Rayyan'):
+        additionalUrl = '1694' #Al Sailiya
+    elif(clubNameError == 'Raja Casablanca'):
+        additionalUrl = '1944'
     elif(clubNameError == 'TP Mazembe'):
         additionalUrl = '3208' #AS Vita    
     elif(clubNameError == 'Espérance de Tunis'):
         additionalUrl = '567' #Club Africain    
     elif(clubNameError == 'Wydad AC'):
         additionalUrl = '3942' #MC Oujda   
-    elif(clubNameError == 'Al Wahda'):
-        additionalUrl = '1432' #Ajman Club
-    elif(clubNameError == 'FC Astana'):
-        additionalUrl = '2192' #FC Kaisar
-    elif(clubNameError == 'BATE'):
-        additionalUrl = '1106' #Neman Grodno
     elif(clubNameError == '1º de Agosto'):
         additionalUrl = '1503' #Petro Atlético
+    elif(clubNameError == 'Auckland City'):
+        additionalUrl = '566' #Brisbane Roar
         
     else:
         raise ValueError('Time Sem Jogadores Suficientes: '+ clubNameError)        

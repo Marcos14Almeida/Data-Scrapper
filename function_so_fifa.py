@@ -32,7 +32,22 @@ def soFifa(siteUrl):
   #pot = soup.find_all("td",{"class":"col col-pt"})  #Potencial máximo dos jogadores
   position = soup.find_all("td",{"class":"col-name"})
   club = soup.find_all("div",{"class":"info"})
+  nationality = soup.find_all('img', attrs={'class': 'flag'})
   
+  #GET NATIONALITY
+  nationalities = []    
+  for imageCountryHTML in nationality:
+        imageCountryStr = str(imageCountryHTML)
+        imageCountryStr = imageCountryStr[imageCountryStr.find('title='):imageCountryStr.find('\" width')]
+        imageCountryStr = imageCountryStr[imageCountryStr.find('\"'):]
+        imageCountryStr = imageCountryStr[1:]
+        nationalities.append(imageCountryStr)
+        #A lista pega de uma 2 tabelas, entao quando aparece o espaço retiramos a tabela superior
+        #Ficando só com as imagens/paises da segunda tabela
+        if(imageCountryStr == ""):
+            nationalities = []
+        
+  #nationalities = nationalities[(len(nationalities))//2:]
   #transform html content to a list
   name_list = appendList(name)
   age_list = appendList(idade)
@@ -65,7 +80,7 @@ def soFifa(siteUrl):
 
   listAllPlayers = []
   for x in range(0,len(name_list)):
-     player = Player(x,clubName,name_list[x],positions_list[x],age_list[x],overall_list[x])
+     player = Player(x,clubName,name_list[x],positions_list[x],age_list[x],overall_list[x],nationalities[x])
      listAllPlayers.append(player)
   
   return listAllPlayers   
@@ -89,4 +104,5 @@ def updatePosition(positionName):
        if(positionName == "CF"): positionName = "ATA"       
        if(positionName == "ST"): positionName = "ATA"
        return positionName
-   
+
+soFifa("https://sofifa.com/team/9/liverpool/")    

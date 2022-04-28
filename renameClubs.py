@@ -66,35 +66,39 @@ def renameClubs(clubName):
         clubName = "Osasuna"  
     elif(clubName == "Real Valladolid CF"):
         clubName = "Valladolid" 
-    elif(clubName == "AD Alcorcón"):
-        clubName = "La Coruna"    
+    elif(clubName == "RCD Mallorca"):
+        clubName = "Mallorca" 
 #%%
-    elif(clubName == "Granada CF"):
-        clubName = "Granada"
-    elif(clubName == "Elche CF"):
-        clubName = "Elche"
+    elif(clubName == "Unión Deportiva Almería"):
+        clubName = "Almería"    
+    elif(clubName == "Burgos CF"):
+        clubName = "Burgos"
     elif(clubName == "Cádiz CF"):
         clubName = "Cádiz"
     elif(clubName == "Elche CF"):
         clubName = "Elche"
-    elif(clubName == "RCD Mallorca"):
-        clubName = "Mallorca" 
-    elif(clubName == "CD Leganés"):
-        clubName = "Leganés"    
-    elif(clubName == "UD Ibiza"):
-        clubName = "Ibiza"    
-    elif(clubName == "Málaga CF"):
-        clubName = "Málaga"    
-    elif(clubName == "Unión Deportiva Las Palmas"):
-        clubName = "Las Palmas"    
-    elif(clubName == "Unión Deportiva Almería"):
-        clubName = "Almería"    
     elif(clubName == "SD Eibar"):
         clubName = "Eibar"    
+    elif(clubName == "Elche CF"):
+        clubName = "Elche"
+    elif(clubName == "Granada CF"):
+        clubName = "Granada"
+    elif(clubName == "UD Ibiza"):
+        clubName = "Ibiza"       
+    elif(clubName == "AD Alcorcón"):
+        clubName = "La Coruna"    
+    elif(clubName == "Unión Deportiva Las Palmas"):
+        clubName = "Las Palmas"    
+    elif(clubName == "CD Leganés"):
+        clubName = "Leganés"    
+    elif(clubName == "Málaga CF"):
+        clubName = "Málaga"    
+    elif(clubName == "Real Oviedo"):
+        clubName = "Real Oviedo"           
     elif(clubName == "Real Sporting de Gijón"):
         clubName = "Sporting de Gijón"    
     elif(clubName == "CD Tenerife"):
-        clubName = "Tenerife"            
+        clubName = "Tenerife"         
 #%%  
     elif(clubName == "AC Milan"):
         clubName = "Milan"
@@ -107,14 +111,86 @@ def renameClubs(clubName):
     elif(clubName == "Udinese Calcio"):
         clubName = "Udinese"
 #%%
+    elif(clubName == "Ascoli Calcio"):
+        clubName = "Ascoli"
+    elif(clubName == "SSC Bari"):
+        clubName = "Bari"     
+    elif(clubName == "Brescia Calcio"):
+        clubName = "Brescia"      
+    elif(clubName == "Como 1907"):
+        clubName = "Como"  
+    elif(clubName == "US Cremonese"):
+        clubName = "Cremonese"
+    elif(clubName == "Frosinone Calcio"):
+        clubName = "Frosinone"
     elif(clubName == "AC Monza"):
         clubName = "Monza"  
-    elif(clubName == "Brescia Calcio"):
-        clubName = "Brescia"          
+    elif(clubName == "Palermo FC"):
+        clubName = "Palermo"       
     elif(clubName == "Pisa SC"):
         clubName = "Pisa"            
     elif(clubName == "AC Perugia"):
-        clubName = "Perugia"          
+        clubName = "Perugia"     
+    elif(clubName == "LR Vicenza"):
+        clubName = "Vicenza"
+#%% 
+    elif(clubName == "FC Bayern München"):
+        clubName = "Bayern Munique"
+    elif(clubName == "Bayer 04 Leverkusen"):
+        clubName = "Bayer Leverkusen"        
+    elif(clubName == "Borussia Mönchengladbach"):
+        clubName = "Moenchengladbach"
+    elif(clubName == "TSG Hoffenheim"):
+        clubName = "Hoffenheim"
+    elif(clubName == "VfL Wolfsburg"):
+        clubName = "Wolfsburg"
+    elif(clubName == "Hertha BSC"):
+        clubName = "Hertha Berlim"
+    elif(clubName == "1. FC Köln"):
+        clubName = "Colonia"
+    elif(clubName == "VfB Stuttgart"):
+        clubName = "Stuttgart"
+    elif(clubName == "FC Augsburg"):
+        clubName = "Augsburg"
+    elif(clubName == "SV Werder Bremen"):
+        clubName = "Werder Bremen"
+    elif(clubName == "Hamburger SV"):
+        clubName = "Hamburgo" 
+    elif(clubName == "FC Schalke 04"):
+        clubName = "Schalke-04"
+    elif(clubName == "Sport-Club Freiburg"):
+        clubName = "Freiburg"
+#%%
+    elif(clubName == "1. FSV Mainz 05"):
+        clubName = "Mainz 05"
+    elif(clubName == "DSC Arminia Bielefeld"):
+        clubName = "Arminia Bielefeld"     
+    elif(clubName == "VfL Bochum 1848"):
+        clubName = "Bochum 1848"
+    elif(clubName == "SV Darmstadt 98"):
+        clubName = "Darmstadt"      
+    elif(clubName == "SG Dynamo Dresden"):
+        clubName = "Dynamo Dresden"     
+    elif(clubName == "Fortuna Düsseldorf"):
+        clubName = "Fortuna Dusseldorf"    
+    elif(clubName == "SpVgg Greuther Fürth"):
+        clubName = "Greuther Furth"   
+    elif(clubName == "F.C. Hansa Rostock"):
+        clubName = "Hansa Rostock"      
+    elif(clubName == "1. FC Heidenheim 1846"):
+        clubName = "Heidenheim"    
+    elif(clubName == "1. FC Kaiserslautern"):
+        clubName = "Kaiserslautern"        
+    elif(clubName == "Karlsruher SC"):
+        clubName = "Karlsruher"        
+    elif(clubName == "1. FC Nürnberg"):
+        clubName = "Nurnberg"           
+    elif(clubName == "SC Paderborn 07"):
+        clubName = "Paderborn"       
+    elif(clubName == "FC St. Pauli"):
+        clubName = "St. Pauli"               
+    elif(clubName == "1. FC Union Berlin"):
+        clubName = "Union Berlin"   
 #%%  
     elif(clubName == "Paris Saint-Germain"):
         clubName = "PSG"
@@ -147,72 +223,40 @@ def renameClubs(clubName):
     elif(clubName == "RC Strasbourg Alsace"):
         clubName = "Strasbourg"         
 #%%
-    elif(clubName == "Clermont Foot 63"):
-        clubName = "Clermont"  
-    elif(clubName == "ESTAC Troyes"):
-        clubName = "Troyes" 
+    elif(clubName == "AC Ajaccio"):
+        clubName = "Ajaccio"  
+    elif(clubName == "Amiens SC"):
+        clubName = "Amiens"         
     elif(clubName == "Angers SCO"):
-        clubName = "Angers" 
-    elif(clubName == "Stade Brestois 29"):
-        clubName = "Stade Brestois"        
-    elif(clubName == "Toulouse Football Club"):
-        clubName = "Toulouse"         
-    elif(clubName == "Stade Malherbe Caen"):
-        clubName = "Caen"        
+        clubName = "Angers"   
     elif(clubName == "AJ Auxerre"):
         clubName = "Auxerre" 
-    elif(clubName == "Nîmes Olympique"):
-        clubName = "Nîmes"           
-    elif(clubName == "Amiens SC"):
-        clubName = "Amiens"           
+    elif(clubName == "Stade Brestois 29"):
+        clubName = "Stade Brestois"       
+    elif(clubName == "Clermont Foot 63"):
+        clubName = "Clermont"       
+    elif(clubName == "Stade Malherbe Caen"):
+        clubName = "Caen"        
     elif(clubName == "Dijon FCO"):
-        clubName = "Dijon"           
-#%% 
-    elif(clubName == "FC Bayern München"):
-        clubName = "Bayern Munique"
-    elif(clubName == "Bayer 04 Leverkusen"):
-        clubName = "Bayer Leverkusen"        
-    elif(clubName == "Borussia Mönchengladbach"):
-        clubName = "Moenchengladbach"
-    elif(clubName == "TSG Hoffenheim"):
-        clubName = "Hoffenheim"
-    elif(clubName == "VfL Wolfsburg"):
-        clubName = "Wolfsburg"
-    elif(clubName == "Hertha BSC"):
-        clubName = "Hertha Berlim"
-    elif(clubName == "1. FC Köln"):
-        clubName = "Colonia"
-    elif(clubName == "VfB Stuttgart"):
-        clubName = "Stuttgart"
-    elif(clubName == "FC Augsburg"):
-        clubName = "Augsburg"
-    elif(clubName == "SV Werder Bremen"):
-        clubName = "Werder Bremen"
-    elif(clubName == "Hamburger SV"):
-        clubName = "Hamburgo" 
-    elif(clubName == "FC Schalke 04"):
-        clubName = "Schalke-04"
-    elif(clubName == "Sport-Club Freiburg"):
-        clubName = "Freiburg"
-#%%
-    elif(clubName == "1. FSV Mainz 05"):
-        clubName = "Mainz 05"
-    elif(clubName == "1. FC Union Berlin"):
-        clubName = "Union Berlin"   
-    elif(clubName == "DSC Arminia Bielefeld"):
-        clubName = "Arminia Bielefeld"     
-    elif(clubName == "VfL Bochum 1848"):
-        clubName = "Bochum 1848"
-    elif(clubName == "1. FC Nürnberg"):
-        clubName = "Nurnberg"            
-    elif(clubName == "FC St. Pauli"):
-        clubName = "St. Pauli"  
-    elif(clubName == "1. FC Kaiserslautern"):
-        clubName = "Kaiserslautern"  
-    elif(clubName == "SG Dynamo Dresden"):
-        clubName = "Dynamo Dresden"            
-    elif(clubName == "Fortuna Düsseldorf"):
-        clubName = "Fortuna Dusseldorf"          
+        clubName = "Dijon"                
+    elif(clubName == "Grenoble Foot 38"):
+        clubName = "Grenoble"    
+    elif(clubName == "En Avant de Guingamp"):
+        clubName = "Guingamp"       
+    elif(clubName == "Le Havre AC"):
+        clubName = "Le Havre"     
+    elif(clubName == "Nîmes Olympique"):
+        clubName = "Nîmes"            
+    elif(clubName == "AS Nancy Lorraine"):
+        clubName = "Nancy"                  
+    elif(clubName == "FC Sochaux-Montbéliard"):
+        clubName = "Sochaux"          
+    elif(clubName == "ESTAC Troyes"):
+        clubName = "Troyes" 
+    elif(clubName == "Toulouse Football Club"):
+        clubName = "Toulouse"     
+    elif(clubName == "Valenciennes FC"):
+        clubName = "Valenciennes"      
 #%%
     elif(clubName == "SL Benfica"):
         clubName = "Benfica" 
@@ -230,36 +274,34 @@ def renameClubs(clubName):
         clubName = "Marítimo"         
     elif(clubName == "Portimonense SC"):
         clubName = "Portimonense" 
-
+    elif(clubName == "Futebol Clube de Famalicão"):
+        clubName = "Famalicão" 
+    elif(clubName == "FC Paços de Ferreira"):
+        clubName = "Paços de Ferreira" 
+    elif(clubName == "Gil Vicente FC"):
+        clubName = "Gil Vicente" 
+    elif(clubName == "Estoril Praia"):
+        clubName = "Estoril" 
+    elif(clubName == "Belenenses SAD"):
+        clubName = "Belenenses" 
+    elif(clubName == "Académica de Coimbra"):
+        clubName = "Coimbra" 
+    elif(clubName == "Moreirense FC"):
+        clubName = "Moreirense" 
+#%%
     elif(clubName == "SC Heerenveen"):
         clubName = "Heerenveen" 
     elif(clubName == "FC Utrecht"):
         clubName = "Utrecht"         
     elif(clubName == "FC Twente"):
         clubName = "Twente"
-#%%   
-    elif(clubName == "Rangers FC"):
-        clubName = "Glasgow Rangers"
-    elif(clubName == "Rosenborg BK"):
-        clubName = "Rosenborg" 
-    elif(clubName == "Malmö FF"):
-        clubName = "Malmo" 
-    elif(clubName == "HJK Helsinki"):
-        clubName = "Helsinki"           
-    elif(clubName == "F.C. København"):
-        clubName = "Copenhague"      
-    elif(clubName == "FC Midtjylland"):
-        clubName = "Midtjylland"  
-    elif(clubName == "FC Red Bull Salzburg"):
-        clubName = "RB Salzburg"
-    elif(clubName == "SK Rapid Wien"):
-        clubName = "Rapid Viena"
-    elif(clubName == "BSC Young Boys"):
-        clubName = "Young Boys"       
-    elif(clubName == "FC Basel 1893"):
-        clubName = "Basel"      
-    elif(clubName == "FC Zürich"):
-        clubName = "Zurich"
+    elif(clubName == "FC Twente"):
+        clubName = "Twente"
+    elif(clubName == "FC Groningen"):
+        clubName = "Groningen"
+    elif(clubName == "Sparta Rotterdam"):
+        clubName = "Sparta Rotterdam"
+        
     elif(clubName == "Club Brugge KV"):
         clubName = "Brugge"
     elif(clubName == "Standard de Liège"):
@@ -268,6 +310,75 @@ def renameClubs(clubName):
         clubName = "Anderlecht"     
     elif(clubName == "KRC Genk"):
         clubName = "Genk"
+    elif(clubName == "KAA Gent"):
+        clubName = "Gent"          
+    elif(clubName == "Royal Antwerp FC"):
+        clubName = "Royal Antwerp"    
+    elif(clubName == "KV Mechelen"):
+        clubName = "Mechelen"    
+#%%   
+    elif(clubName == "Rangers FC"):
+        clubName = "Glasgow Rangers"        
+        #SUIÇA
+    elif(clubName == "BSC Young Boys"):
+        clubName = "Young Boys"       
+    elif(clubName == "FC Basel 1893"):
+        clubName = "Basel"      
+    elif(clubName == "FC Zürich"):
+        clubName = "Zurich"          
+    elif(clubName == "FC Lugano"):
+        clubName = "Lugano"         
+    elif(clubName == "Grasshopper Club Zürich"):
+        clubName = "Grasshopper"        
+        #AUSTRIA
+    elif(clubName == "SK Sturm Graz"):
+        clubName = "Sturm Graz"           
+    elif(clubName == "FK Austria Wien"):
+        clubName = "Austria Wien"     
+    elif(clubName == "FC Red Bull Salzburg"):
+        clubName = "RB Salzburg"
+    elif(clubName == "SK Rapid Wien"):
+        clubName = "Rapid Viena"
+        #POLONIA        
+    elif(clubName == "Lech Poznań"):
+        clubName = "Lech Poznan"        
+    elif(clubName == "Wisła Kraków"):
+        clubName = "Wisla Krakow"        
+#%%        
+    #NORUEGA
+    elif(clubName == "Rosenborg BK"):
+        clubName = "Rosenborg"       
+    elif(clubName == "Molde FK"):
+        clubName = "Molde"          
+    elif(clubName == "FK Bodø/Glimt"):
+        clubName = "Bodø/Glimt"    
+    #SUÉCIA     
+    elif(clubName == "Malmö FF"):
+        clubName = "Malmo"   
+    elif(clubName == "AIK"):
+        clubName = "AIK"    
+    elif(clubName == "AIK"):
+        clubName = "AIK"    
+    elif(clubName == "Hammarby IF"):
+        clubName = "Hammarby"    
+    elif(clubName == "IFK Göteborg"):
+        clubName = "IFK Goteborg"    
+    #DINAMARCA    
+    elif(clubName == "F.C. København"):
+        clubName = "Copenhague"      
+    elif(clubName == "FC Midtjylland"):
+        clubName = "Midtjylland"        
+    elif(clubName == "Brøndby IF"):
+        clubName = "Brøndby"     
+    elif(clubName == "Aalborg BK"):
+        clubName = "Aalborg"    
+    elif(clubName == "Randers FC"):
+        clubName = "Randers"    
+    elif(clubName == "Odense Boldklub"):
+        clubName = "Odense Boldklub"    
+    #FINLANDIA
+    elif(clubName == "HJK Helsinki"):
+        clubName = "Helsinki"         
         
 #%%
     elif(clubName == "Zenit Saint Petersburg"):
@@ -285,18 +396,20 @@ def renameClubs(clubName):
     elif(clubName == "FC Sochi"):
         clubName = "Sochi"     
 
-    elif(clubName == "FK Partizan"):
-        clubName = "Partizan"
-    elif(clubName == "Crvena Zvezda"):
-        clubName = "Estrela Vermelha"
-    elif(clubName == "Ludogorets Razgrad"):
-        clubName = "Ludogorets"
     elif(clubName == "Shakhtar Donetsk"):
         clubName = "Shaktar Donetsk"
     elif(clubName == "Dynamo Kyiv"):
         clubName = "Dinamo Kiev"     
+    elif(clubName == "SC Dnipro-1"):
+        clubName = "Dnipro"     
+    elif(clubName == "FC Metalist 1925 Kharkiv"):
+        clubName = "Metalist"     
+    elif(clubName == "FK Qarabag"):
+        clubName = "Qarabag"         
+    elif(clubName == "FC Astana"):
+        clubName = "Astana"      
 #%%      
-
+    #TURQUIA
     elif(clubName == "Galatasaray SK"):
         clubName = "Galatasaray"
     elif(clubName == "Beşiktaş JK"):
@@ -305,45 +418,55 @@ def renameClubs(clubName):
         clubName = "Fenerbahce"
     elif(clubName == "İstanbul Başakşehir FK"):
         clubName = "Instanbul Basaksehir"
+    elif(clubName == "Demir Grup Sivasspor"):
+        clubName = "Sivasspor"
+    elif(clubName == "Antalyaspor"):
+        clubName = "Antalyaspor"
+    #GRÉCIA    
     elif(clubName == "Olympiacos"):
         clubName = "Olympiacos"
     elif(clubName == "AEK Athens"):
         clubName = "AEK"
     elif(clubName == "Panathinaikos FC"):
         clubName = "Panathinaikos"
-    elif(clubName == "FC Viktoria Plzeň"):
-        clubName = "Viktoria Plzen"          
-    elif(clubName == "FK Vardar"):
-        clubName = "FK Vardar"       
-    elif(clubName == "NK Maribor"):
-        clubName = "Maribor" 
+    elif(clubName == "Aris Thessaloniki"):
+        clubName = "Aris Thessaloniki"
+#%%      
+    #CROACIA
+    elif(clubName == "HNK Rijeka"):
+        clubName = "Rijeka"     
+    #ROMENIA
     elif(clubName == "FCSB (Steaua)"):
-        clubName = "Steaua Bucareste"    
-    elif(clubName == "FK Qarabag"):
-        clubName = "Qarabag"         
-    elif(clubName == "FC Astana"):
-        clubName = "Astana"      
+        clubName = "Steaua Bucareste" 
+    #REP.TCHECA
     elif(clubName == "Sparta Praha"):
         clubName = "Sparta Praga"
     elif(clubName == "SK Slavia Praha"):
         clubName = "Slavia Praha"   
-#%%
-    elif(clubName == "KAA Gent"):
-        clubName = "Gent"          
-    elif(clubName == "Royal Antwerp FC"):
-        clubName = "Royal Antwerp"      
-    elif(clubName == "Lech Poznań"):
-        clubName = "Lech Poznan"          
-    elif(clubName == "SK Sturm Graz"):
-        clubName = "Sturm Graz"           
-    elif(clubName == "FK Bodø/Glimt"):
-        clubName = "Bodø/Glimt"           
-    elif(clubName == "Molde FK"):
-        clubName = "Molde"        
-    elif(clubName == "Brøndby IF"):
-        clubName = "Brøndby"     
-    elif(clubName == "FK Austria Wien"):
-        clubName = "Austria Wien"     
+    elif(clubName == "FC Viktoria Plzeň"):
+        clubName = "Viktoria Plzen"     
+    #HUNGRIA
+    elif(clubName == "Ferencvárosi TC"):
+        clubName = "Ferencvaros"     
+    elif(clubName == "Budapest Honvéd"):
+        clubName = "Honved"     
+    elif(clubName == "Puskás Akadémia FC"):
+        clubName = "Puskas Akademia"     
+    elif(clubName == "Újpest FC"):
+        clubName = "Ujpest"         
+    #BULGARIA
+    elif(clubName == "Ludogorets Razgrad"):
+        clubName = "Ludogorets"    
+    #SERVIA                 
+    elif(clubName == "FK Partizan"):
+        clubName = "Partizan"
+    elif(clubName == "Crvena Zvezda"):
+        clubName = "Estrela Vermelha"
+#%%   
+    elif(clubName == "FK Vardar"):
+        clubName = "FK Vardar"       
+    elif(clubName == "NK Maribor"):
+        clubName = "Maribor" 
 ###################################################
 ###################################################
 ###################################################               
@@ -433,6 +556,8 @@ def renameClubs(clubName):
         clubName = "Santo André" 
     elif(clubName == "SER Caxias do Sul"):
         clubName = "Caxias do Sul" 
+    elif(clubName == "Brusque FC"):
+        clubName = "Brusque" 
 #%% 
     elif(clubName == "Club Atlético Colón"):
         clubName = "Colón"  
@@ -459,50 +584,64 @@ def renameClubs(clubName):
         clubName = "Gimnasia y Esgrima"    
     elif(clubName == "Unión de Santa Fe"):
         clubName = "Unión de Santa Fe"    
+    elif(clubName == "Club Atlético Aldosivi"):
+        clubName = "Aldosivi"    
+    elif(clubName == "Club Atlético Central Córdoba"):
+        clubName = "Central Córdoba"    
 #%%         
+    #URUGUAI
+    elif(clubName == "River Plate de Montevideo"):
+        clubName = "River Plate de Montevideo"       
+    elif(clubName == "Montevideo City Torque"):
+        clubName = "Montevideo City"        
+    elif(clubName == "Danubio"):
+        clubName = "Danubio"           
+    elif(clubName == "Defensor Sporting"):
+        clubName = "Defensor"    
+    #PARAGUAI
     elif(clubName == "Club Olimpia"):
         clubName = "Olimpia"
     elif(clubName == "Club Libertad"):
-        clubName = "Libertad"
+        clubName = "Libertad"   
+    elif(clubName == "Club Nacional"):
+        clubName = "Club Nacional"  
+    #CHILE
     elif(clubName == "Colo Colo"):
         clubName = "Colo-Colo"
     elif(clubName == "Universidad de Chile"):
         clubName = "LaU"
     elif(clubName == "Universidad Católica"):
         clubName = "Univ. Católica"
-    elif(clubName == "Independiente del Valle"):
-        clubName = "I. Del Valle"
-    elif(clubName == "Liga de Quito"):
-        clubName = "LDU"
-    elif(clubName == "CS Emelec"):
-        clubName = "Emelec"
-    elif(clubName == "Barcelona SC"):
-        clubName = "Barcelona-EQU"
-    elif(clubName == "Caracas FC"):
-        clubName = "Caracas"
-    elif(clubName == "Club Universitario de Deportes"):
-        clubName = "Universitario"
-    elif(clubName == "Club The Strongest"):
-        clubName = "The Strongest"
-        
-    elif(clubName == "Club Cienciano"):
-        clubName = "Cienciano"        
-    elif(clubName == "Club Deportivo Palestino"):
-        clubName = "Palestino"            
-    elif(clubName == "Deportivo Táchira FC"):
-        clubName = "Deportivo Táchira"     
-    elif(clubName == "Club Deportivo Jorge Wilstermann"):
-        clubName = "Jorge Wilstermann"                 
-    elif(clubName == "Club Always Ready"):
-        clubName = "Always Ready"        
-    elif(clubName == "Club Nacional"):
-        clubName = "Club Nacional"      
-    elif(clubName == "FBC Melgar"):
-        clubName = "Melgar"            
     elif(clubName == "Club Deportivo Palestino"):
         clubName = "Palestino"        
+    elif(clubName == "Club Deportivo Palestino"):
+        clubName = "Palestino"        
+    elif(clubName == "CD Huachipato"):
+        clubName = "Huachipato"              
+    elif(clubName == "CD Everton"):
+        clubName = "Everton-CHI"             
+#%%   
+    #PERU
+    elif(clubName == "Club Universitario de Deportes"):
+        clubName = "Universitario"
+    elif(clubName == "Club Cienciano"):
+        clubName = "Cienciano"        
+    elif(clubName == "FBC Melgar"):
+        clubName = "Melgar"               
+    elif(clubName == "Sport Boys"):
+        clubName = "Sport Boys"             
+    #BOLIVIA
+    elif(clubName == "Club The Strongest"):
+        clubName = "The Strongest"
+    elif(clubName == "Club Deportivo Jorge Wilstermann"):
+        clubName = "Jorge Wilstermann"      
+    elif(clubName == "Club Always Ready"):
+        clubName = "Always Ready"          
+    elif(clubName == "Oriente Petrolero"):
+        clubName = "Oriente Petrolero"          
         
 #%%         
+    #COLÔMBIA
     elif(clubName == "Junior FC"):
         clubName = "Junior"
     elif(clubName == "Independiente Medellín"):
@@ -511,7 +650,32 @@ def renameClubs(clubName):
         clubName = "Santa Fé" 
     elif(clubName == "Deportes Tolima"):
         clubName = "Tolima"        
-
+    elif(clubName == "La Equidad"):
+        clubName = "La Equidad"        
+    #EQUADOR
+    elif(clubName == "Independiente del Valle"):
+        clubName = "I. Del Valle"
+    elif(clubName == "Liga de Quito"):
+        clubName = "LDU"
+    elif(clubName == "CS Emelec"):
+        clubName = "Emelec"
+    elif(clubName == "Barcelona SC"):
+        clubName = "Barcelona-EQU"
+    elif(clubName == "Guayaquil City"):
+        clubName = "Guayaquil City"
+    elif(clubName == "Universidad Católica del Ecuador"):
+        clubName = "U. Católica del Ecuador"
+    #VENEZUELA
+    elif(clubName == "Caracas FC"):
+        clubName = "Caracas"   
+    elif(clubName == "Deportivo Táchira FC"):
+        clubName = "Deportivo Táchira"
+    elif(clubName == "Deportivo La Guaira FC"):
+        clubName = "La Guaira"      
+    elif(clubName == "Estudiantes de Mérida"):
+        clubName = "Estudiantes de Mérida"      
+    elif(clubName == "Metropolitanos de Caracas FC"):
+        clubName = "Metropolitanos de Caracas"      
 ###################################################
 ###################################################
 ###################################################
@@ -575,8 +739,13 @@ def renameClubs(clubName):
         clubName = "Ghuangzhou Evergrande"
     elif(clubName == "Shandong Taishan"):
         clubName = "Shandong Luneng"
-    elif(clubName == "Jeonbuk Motors"):
+    elif(clubName == "Jeonbuk Hyundai Motors"):
         clubName = "Jeonbuk Hyundai"
+    elif(clubName == "Suwon Samsung Bluewings"):
+        clubName = "Suwon Samsung" 
+    elif(clubName == "Incheon United FC"):
+        clubName = "Incheon United" 
+#%%        
     elif(clubName == "Al Ain"):
         clubName = "Al Ain-EAU"
     elif(clubName == "Al Sadd SC"):
@@ -587,18 +756,18 @@ def renameClubs(clubName):
         clubName = "Al Ahli"        
     elif(clubName == "Al Duhail SC"):
         clubName = "Al Duhail" 
-#%%        
-    elif(clubName == "Suwon Samsung Bluewings"):
-        clubName = "Suwon Samsung" 
-    elif(clubName == "Melbourne City FC"):
-        clubName = "Melbourne City" 
+    elif(clubName == "Al Rayyan"):
+        clubName = "Al Rayyan" 
 #%%        
     elif(clubName == "Zamalek SC"):
         clubName = "Zamalek"
     elif(clubName == "TP Mazembe"):
         clubName = "Mazembe" 
     elif(clubName == "Wydad AC"):
-        clubName = "Wydad Casablanca"            
+        clubName = "Wydad Casablanca"   
+#%%        
+    elif(clubName == "Melbourne City FC"):
+        clubName = "Melbourne City"           
 
          
      
