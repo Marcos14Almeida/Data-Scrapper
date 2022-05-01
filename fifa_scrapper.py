@@ -22,7 +22,7 @@ i = 0
 def showCarregando():
  global i 
  i += 1
- nLeagues = 35
+ nLeagues = 40
  print('--------------------%s/%s---------------------' %(i,nLeagues))
  print('-------------------- %s%% --------------------' %round((100*i/nLeagues)))
  print("------------------ %s seconds ------------" %round(time.time() - start_time))
@@ -57,6 +57,10 @@ listAll = file_names.Italia2()
 saveToFile("italia2",listAll)
 showCarregando()
 
+listAll = file_names.Italia3()
+saveToFile("italia3",listAll)
+showCarregando()
+#%%
 listAll = file_names.Alemanha()
 saveToFile("alemanha",listAll)
 showCarregando()
@@ -83,6 +87,9 @@ showCarregando()
 listAll = file_names.EuropaOcidental()
 saveToFile("europa_ocidental",listAll)
 
+listAll = file_names.EuropaOcidental2()
+saveToFile("europa_ocidental2",listAll)
+
 listAll = file_names.Nordicos()
 saveToFile("nordicos",listAll)
 showCarregando()
@@ -106,7 +113,7 @@ saveToFile("europa_outros",listAll)
 listAll = file_names.Brasil()
 saveToFile("brasil",listAll)
 showCarregando()
-#%%
+
 listAll = file_names.Brasil2()
 saveToFile("brasil2",listAll)
 showCarregando()
@@ -125,16 +132,22 @@ showCarregando()
 
 listAll = file_names.Argentina2()
 saveToFile("argentina2",listAll)
-
-listAll = file_names.SulAmericano()
+#%%
+listAll = file_names.UruguaiParaguai()
 saveToFile("sulamericano",listAll)
 showCarregando()
 
-listAll = file_names.SulAmericano2()
+listAll = file_names.Chile()
+saveToFile("chile",listAll)
+#%%
+listAll = file_names.PeruBolivia()
 saveToFile("sulamericano2",listAll)
 showCarregando()
 
-listAll = file_names.Merconorte()
+listAll = file_names.Colombia()
+saveToFile("colombia",listAll)
+
+listAll = file_names.EquadorVenezuela()
 saveToFile("merconorte",listAll)
 showCarregando()
 
@@ -155,6 +168,10 @@ showCarregando()
 #RESTO DO MUNDO
 listAll = file_names.Asia()
 saveToFile("asia",listAll)
+showCarregando()
+
+listAll = file_names.Japao()
+saveToFile("japao",listAll)
 showCarregando()
 
 listAll = file_names.OrienteMedio()
@@ -180,14 +197,15 @@ if(len(globalErrors)>0):
 #%%    
 import pandas as pd
 #CHECK DATASET
-fileNames = ['inglaterra','inglaterra2','inglaterra3','italia','italia2',
+fileNames = ['inglaterra','inglaterra2','inglaterra3',
+             'italia','italia2','italia3',
              'espanha','espanha2','franca','franca2','alemanha','alemanha2',
-             'portugal','holanda_belgica','europa_ocidental','nordicos',
+             'portugal','holanda_belgica','europa_ocidental','europa_ocidental2','nordicos',
              'urss','turquia_grecia','europa_leste','europa_outros',
              'brasil','brasil2','brasil3','brasil4',
-             'argentina','argentina2','sulamericano','sulamericano2','merconorte',
+             'argentina','argentina2','sulamericano','chile','sulamericano2','colombia','merconorte',
              'mexico','eua','eua2',
-             'asia','oriente_medio','africa','oceania']
+             'asia','japao','oriente_medio','africa','oceania']
 dataframes = {}
 for filename in fileNames:
  dataframes[filename] = pd.read_csv("data/%s.csv" %filename,header=None)    

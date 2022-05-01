@@ -6,6 +6,12 @@ Created on Mon Mar 28 16:09:17 2022
 """
 from get_list_players import getListPlayers
 
+
+
+#MAXIMO DE 18 TIMES POR ARQUIVO, PARA O CSV NÃO TER MUITAS COLUNAS E DAR OVERFLOW
+
+
+
 #%%
 def Inglaterra():    
     list = [
@@ -166,7 +172,12 @@ def Italia2():
         "119", #Perugia
         "872", #Pisa
         "1467", #SPAL
-        
+        ]
+    
+    return getListPlayers(list) 
+#%%
+def Italia3():  
+    list = [        
         "https://sofifa.com/team/110741/spezia/",
         "134", #Vicenza
         "https://sofifa.com/team/205/venezia-fc/",
@@ -315,11 +326,6 @@ def HolandaBelgica():
 #%%
 def EuropaOcidental(): 
     list = [
-        #ESCÓCIA
-        "https://sofifa.com/team/78/celtic/" ,
-        "https://sofifa.com/team/86/rangers-fc/" ,       
-        "https://sofifa.com/team/81/hibernian/",
-        "https://sofifa.com/team/77/aberdeen/",
         #SUIÇA
         "https://sofifa.com/team/896/fc-basel-1893/",
         "https://sofifa.com/team/900/bsc-young-boys/",
@@ -332,6 +338,17 @@ def EuropaOcidental():
         "https://sofifa.com/team/254/sk-rapid-wien/",
         "https://sofifa.com/team/209/sk-sturm-graz/",  
         "https://sofifa.com/team/256/fk-austria-wien/",
+        ]
+    
+    return getListPlayers(list)  
+#%%
+def EuropaOcidental2(): 
+    list = [
+        #ESCÓCIA
+        "https://sofifa.com/team/78/celtic/" ,
+        "https://sofifa.com/team/86/rangers-fc/" ,       
+        "https://sofifa.com/team/81/hibernian/",
+        "https://sofifa.com/team/77/aberdeen/",
         #POLONIA
         "https://sofifa.com/team/1871/legia-warszawa/",
         "https://sofifa.com/team/873/lech-poznan/",   
@@ -581,7 +598,7 @@ def Argentina2():
 
      return getListPlayers(list)      
 #%%
-def SulAmericano(): 
+def UruguaiParaguai(): 
     list = [
         #URUGUAI
         "376", #Penarol
@@ -595,7 +612,11 @@ def SulAmericano():
         "615", #Cerro
         "616", #Libertad
         "617", #Club Guaraní
+        ]
 
+    return getListPlayers(list)
+def Chile(): 
+    list = [
         #CHILE
         "https://sofifa.com/team/112671/club-nacional/", #Nacional -PAR
         "362", #colo-colo
@@ -610,7 +631,7 @@ def SulAmericano():
 
     return getListPlayers(list)
 #%%
-def SulAmericano2(): 
+def PeruBolivia(): 
     list = [       
         #PERU
         "509", #Sporting Cristal
@@ -631,7 +652,7 @@ def SulAmericano2():
 
     return getListPlayers(list)    
 #%%
-def Merconorte(): 
+def Colombia(): 
     list = [
         "620", #América de Cali
         "912", #Atlético Nacional
@@ -643,7 +664,12 @@ def Merconorte():
         "916", #Santa fé
         "https://sofifa.com/team/112523/la-equidad/",        
         "917", #Tolima
-        
+        ]
+
+    return getListPlayers(list)
+#%%
+def EquadorVenezuela(): 
+    list = [
         #EQUADOR
         "1562", #Del Valle
         "656", #LDU
@@ -661,7 +687,6 @@ def Merconorte():
         ]
 
     return getListPlayers(list)
-
 ###################################################
 ###################################################
 ###################################################
@@ -736,6 +761,21 @@ def Asia():
         "1521", #Ghuangzou
         "1068", #Shandong
         "https://sofifa.com/team/111768/beijing-guoan-fc/",
+        #COREIA
+        "1059", #Pohang Steelers        
+        "https://sofifa.com/team/1477/jeonbuk-hyundai-motors/", #Jeonbuk Hyundai
+        "https://sofifa.com/team/982/fc-seoul/",
+        "https://sofifa.com/team/983/suwon-samsung-bluewings/",
+        "681", #Ulsan Hyundai
+        "https://sofifa.com/team/110765/incheon-united-fc/",
+         #TAILANDIA
+         "1943", #Buriram United
+        ]
+
+    return getListPlayers(list)
+#%%
+def Japao(): 
+    list = [
         #JAPÃO
         "517", #Urawa
         "527", #Kawasaki
@@ -748,15 +788,6 @@ def Asia():
         "https://sofifa.com/team/101151/yokohama-f-marinos/",
         "https://sofifa.com/team/112092/nagoya-grampus/",
         "https://sofifa.com/team/113157/sanfrecce-hiroshima/",
-        #COREIA
-        "1059", #Pohang Steelers        
-        "https://sofifa.com/team/1477/jeonbuk-hyundai-motors/", #Jeonbuk Hyundai
-        "https://sofifa.com/team/982/fc-seoul/",
-        "https://sofifa.com/team/983/suwon-samsung-bluewings/",
-        "681", #Ulsan Hyundai
-        "https://sofifa.com/team/110765/incheon-united-fc/",
-         #TAILANDIA
-         "1943", #Buriram United
         ]
 
     return getListPlayers(list)

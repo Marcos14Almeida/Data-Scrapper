@@ -20,12 +20,14 @@ def saveToFile(filename,listAllPlayers):
 #%%    
     row_string = []    
     
+    commas = ',,,,,,,'
+    
     #ADD 1 LINHA  
     string = ""  
     for clubsIndex in range(0,len(listAllPlayers)):
           player = listAllPlayers[clubsIndex][0]
           player.clubName = renameClubs(player.clubName)
-          string += player.clubName+",,,,,"  
+          string += player.clubName+commas
     row_string.append(['a,'+string])
     
     #TRANSFORM LIST OF PLAYERS INTO ROWS TO SAVE IN CSV
@@ -36,9 +38,9 @@ def saveToFile(filename,listAllPlayers):
           #print(listAllPlayers[clubsIndex][playerIndex].name)
           if(len(listAllPlayers[clubsIndex]) > playerIndex):
               player = listAllPlayers[clubsIndex][playerIndex]
-              string += player.name+","+player.position+","+ str(player.age)+","+ str(player.overall)+",,"
+              string += player.name+","+player.position+","+ str(player.age)+","+ str(player.overall)+","+ player.nationality+","+ player.imageUrl+",,"
           else:
-              string += ',,,,,'      
+              string += commas     
       row_string.append(['a,'+string])
         
 

@@ -8,6 +8,7 @@ import requests
 import re #regular expressions
 from bs4 import BeautifulSoup
 from class_player import Player
+from renameNationality import renameNationality
 
  
 #%%  
@@ -19,42 +20,22 @@ def soccerWiki(clubID):
     
 #%%  
     #Get Club Name
-    soupInfos = soup.find_all("h1",{'h1','h5 heading-component-title'})
-    clubName = []
-    for x in soupInfos:
-        clubName.append(x.text) 
-    clubName = clubName[0]
-    
-    #GET NATIONALITY from flag image
-    #https://stackoverflow.com/questions/43814754/python-beautifulsoup-how-to-get-href-attribute-of-a-element
-    #https://stackoverflow.com/questions/55413046/beautifulsoap-get-multiple-element-for-all-img-in-a-div-with-specific-class
-    images_box = soup.find_all('div', attrs={'class': 'd-inline'})
-    nationalities = []    
-    for a in images_box:
-        imageCountryHTML = a.find('a')
-        imageCountryStr = str(imageCountryHTML)
-        imageCountryStr = imageCountryStr[imageCountryStr.find('title='):imageCountryStr.find('\"><span')]
-        imageCountryStr = imageCountryStr[imageCountryStr.find('\"'):]
-        imageCountryStr = imageCountryStr[1:]
-        nationalities.append(imageCountryStr)
-    #print(nationalities)
-
-    #Get Table Info
-    soupInfos = soup.find_all("tr")
-    all_table_list = [] 
-    for x in soupInfos:
-        all_table_list.append(x.text) 
-    all_table_list.pop(0)
+    soupInfos = soup.find_all("h1",{'h1','h5 heading-component-title'})    
+    clubName = getClubName(soupInfos)
+#%%    
+    #GET NATIONALITY
+    nationalitySoup = soup.find_all('div', attrs={'class': 'd-inline'})    
+    nationalities = getNationality(nationalitySoup)
+#%%
+    #GET PLAYER IMAGE
+    imageUrlSoup = soup.find_all('img', attrs={'height': '64'})
+    imageUrls = getPlayerImageUrl(imageUrlSoup)  
     
 #%%  
-    #A lista vem com varias linhas e campos desnesseraios como jogadores emprestados a outros clubes
-    #Filtra a lista pra deixar só os jogadores
-    all_players = []
-    for x in all_table_list:
-        if(x[0].isnumeric()):
-         all_players.append(x)
-        else:
-            break   
+    #GET ALL PLAYERS LIST    
+    soupInfos = soup.find_all("tr")
+    all_table_list = getTableInfo(soupInfos)
+    all_players = filterCorrectPlayers(all_table_list)
         
 #%%          
     overall_list = []
@@ -71,27 +52,8 @@ def soccerWiki(clubID):
         all_players[x] = all_players[x].replace(all_players[x][1],'')
       if(all_players[x][0].isnumeric()):
         all_players[x] = all_players[x].replace(all_players[x][0],'')
-      #Retira certas letras indesejadas  
-      all_players[x] = all_players[x].replace('ò','a')
-      all_players[x] = all_players[x].replace('ã','a')
-      all_players[x] = all_players[x].replace('ă','a')
-      all_players[x] = all_players[x].replace('á','a')
-      all_players[x] = all_players[x].replace('é','e')
-      all_players[x] = all_players[x].replace('è','e')
-      all_players[x] = all_players[x].replace('ê','e')
-      all_players[x] = all_players[x].replace('í','i')
-      all_players[x] = all_players[x].replace('ó','o')
-      all_players[x] = all_players[x].replace('ô','o')
-      all_players[x] = all_players[x].replace('ú','u')
-      all_players[x] = all_players[x].replace('ü','u')
-      all_players[x] = all_players[x].replace('ç','c')
-      all_players[x] = all_players[x].replace('č','c')
-      all_players[x] = all_players[x].replace('č','c')
-      all_players[x] = all_players[x].replace('ć','c')
-      all_players[x] = all_players[x].replace('ń','n')
-      all_players[x] = all_players[x].replace('š','s')
-      all_players[x] = all_players[x].replace('ů','u')
-      all_players[x] = all_players[x].replace('ý','y')
+      #REPLACE WEIRD LETTERS  
+      all_players[x] = replaceLetters(all_players, x)
      
 #%%        
     #Ex: WeventonG -> 'Weverto','nG,'' -> 'Weverton','G'    
@@ -119,10 +81,11 @@ def soccerWiki(clubID):
        string += ' '
       positions_list[rowNumber] = string.strip() # remove spaces at the end   
          
-    
+    #SAVE DATA TO CLASS
     listAllPlayers = []
     for x in range(0,len(name_list)): 
-       player = Player(x,clubName,name_list[x],positions_list[x],age_list[x],overall_list[x],nationalities[x])
+       #print(name_list[x],nationalities[x], imageUrls[x])
+       player = Player(x,clubName,name_list[x],positions_list[x],age_list[x],overall_list[x],nationalities[x],imageUrls[x])
        listAllPlayers.append(player)
  
     #TODO: SORT PLAYERS
@@ -130,6 +93,100 @@ def soccerWiki(clubID):
  
     
  
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+###############################################################################    
+##                            F U N C T I O N S                              ##  
+###############################################################################    
+#%% 
+def getClubName(soupInfos):
+    clubName = []
+    for x in soupInfos:
+        clubName.append(x.text) 
+    clubName = clubName[0]
+    return clubName  
+#%%
+def getTableInfo(soupInfos):
+    all_table_list = [] 
+    for x in soupInfos:
+        all_table_list.append(x.text) 
+    all_table_list.pop(0)
+    return all_table_list    
+#%%
+def filterCorrectPlayers(all_table_list): 
+    #A lista vem com varias linhas e campos desnesseraios como jogadores emprestados a outros clubes
+    #Filtra a lista pra deixar só os jogadores
+    all_players = []
+    for x in all_table_list:
+        if(x[0].isnumeric()):
+         all_players.append(x)
+        else:
+            break  
+    return all_players    
+#%%
+def getPlayerImageUrl(imageUrlSoup):
+    imageUrls = []    
+    for imageUrlHTML in imageUrlSoup:
+          imageStr = str(imageUrlHTML)
+          imageStr = imageStr[imageStr.find('player/'):imageStr.find('\" height')]
+          imageStr = 'wiki'+imageStr[imageStr.find('/'):]
+          imageUrls.append(imageStr)
+          
+    return imageUrls
+#%%    
+def getNationality(nationalitySoup):
+    #GET NATIONALITY from flag image
+    #https://stackoverflow.com/questions/43814754/python-beautifulsoup-how-to-get-href-attribute-of-a-element
+    #https://stackoverflow.com/questions/55413046/beautifulsoap-get-multiple-element-for-all-img-in-a-div-with-specific-class
+    
+    #Ex Url:
+    #https://cdn.soccerwiki.org/images/player/50937.png
+    nationalities = []    
+    for a in nationalitySoup:
+        imageCountryHTML = a.find('a')
+        imageCountryStr = str(imageCountryHTML)
+        #Pega a string entre esse intervalo
+        #
+        imageCountryStr = imageCountryStr[imageCountryStr.find('title='):imageCountryStr.find('\"><span')]
+        imageCountryStr = imageCountryStr[imageCountryStr.find('\"'):]
+        imageCountryStr = imageCountryStr[1:]
+        imageCountryStr = renameNationality(imageCountryStr) #To English format
+        nationalities.append(imageCountryStr)
+    #print(nationalities)
+
+    return nationalities 
+
+#%%
+def replaceLetters(all_players, x):    
+      #Retira certas letras indesejadas  
+      all_players[x] = all_players[x].replace('ò','a')
+      all_players[x] = all_players[x].replace('ã','a')
+      all_players[x] = all_players[x].replace('ă','a')
+      all_players[x] = all_players[x].replace('á','a')
+      all_players[x] = all_players[x].replace('é','e')
+      all_players[x] = all_players[x].replace('è','e')
+      all_players[x] = all_players[x].replace('ê','e')
+      all_players[x] = all_players[x].replace('í','i')
+      all_players[x] = all_players[x].replace('ó','o')
+      all_players[x] = all_players[x].replace('ô','o')
+      all_players[x] = all_players[x].replace('ú','u')
+      all_players[x] = all_players[x].replace('ü','u')
+      all_players[x] = all_players[x].replace('ç','c')
+      all_players[x] = all_players[x].replace('č','c')
+      all_players[x] = all_players[x].replace('č','c')
+      all_players[x] = all_players[x].replace('ć','c')
+      all_players[x] = all_players[x].replace('ń','n')
+      all_players[x] = all_players[x].replace('š','s')
+      all_players[x] = all_players[x].replace('ů','u')
+      all_players[x] = all_players[x].replace('ý','y')
+      return all_players[x]
+    
 #%%    
 def updatePosition(positionName):
        if(positionName == "G"): positionName = "GOL"
@@ -174,3 +231,6 @@ def updatePosition(positionName):
        else: positionName = "ATA"
        
        return positionName
+
+#%%
+#soccerWiki(300) #Palmeiras ID

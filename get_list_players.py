@@ -51,7 +51,7 @@ def printResult(siteUrl,listPlayers):
     print("NÚMERO DE JOGADORES: %i\n" % len(listPlayers)) 
     for x in range(0,len(listPlayers)):
       player = listPlayers[x]        
-      print(player.name,player.position,player.age,player.overall)  
+      print(player.name,player.position,player.age,player.overall,player.nationality,player.imageUrl)  
     print('Time: %s' %listPlayers[0].clubName) 
     
 #%%    
