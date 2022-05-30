@@ -80,6 +80,8 @@ def addTeamPlayers(clubNameError):
         additionalUrl = '2192' #FC Kaisar
     elif(clubNameError == 'BATE'):
         additionalUrl = '1106' #Neman Grodno
+    elif(clubNameError == 'Dinamo Minsk'):
+        additionalUrl = '1113' #Dinamo Brest
     elif(clubNameError == 'FK Vardar'):
         additionalUrl = '4846' #Skopje  
     elif(clubNameError == 'Figueirense'):
@@ -106,6 +108,12 @@ def addTeamPlayers(clubNameError):
         additionalUrl = '4758' #altos
     elif(clubNameError == 'Manaus FC'):
         additionalUrl = '2216' #aguia maraba
+    elif(clubNameError == 'AA Internacional'):
+        additionalUrl = '3205' #Coruripe
+    elif(clubNameError == 'CA Juventus'):
+        additionalUrl = '3678' #Juventus Jaraguá
+    elif(clubNameError == 'XV de Piracicaba'):
+        additionalUrl = '3724' #XV de Jaú
     elif(clubNameError == 'Al Ain'):
         additionalUrl = '1346'
     elif(clubNameError == 'Al Duhail SC'):
@@ -129,7 +137,11 @@ def addTeamPlayers(clubNameError):
     elif(clubNameError == 'Wydad AC'):
         additionalUrl = '3942' #MC Oujda   
     elif(clubNameError == '1º de Agosto'):
-        additionalUrl = '1503' #Petro Atlético
+        additionalUrl = '4194' #Sagrada Esperança
+    elif(clubNameError == 'Petro Atlético'):
+        additionalUrl = '4290' #UD Vilafranquense
+    elif(clubNameError == 'ES Sétif'):
+        additionalUrl = '2273' #MC Oran
     elif(clubNameError == 'Auckland City'):
         additionalUrl = '566' #Brisbane Roar
         

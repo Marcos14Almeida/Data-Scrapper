@@ -22,7 +22,7 @@ i = 0
 def showCarregando():
  global i 
  i += 1
- nLeagues = 40
+ nLeagues = 30
  print('--------------------%s/%s---------------------' %(i,nLeagues))
  print('-------------------- %s%% --------------------' %round((100*i/nLeagues)))
  print("------------------ %s seconds ------------" %round(time.time() - start_time))
@@ -40,6 +40,9 @@ showCarregando()
 
 listAll = file_names.Inglaterra3()
 saveToFile("inglaterra3",listAll)
+
+listAll = file_names.Inglaterra4()
+saveToFile("inglaterra4",listAll)
 
 listAll = file_names.Espanha()
 saveToFile("espanha",listAll)
@@ -197,7 +200,7 @@ if(len(globalErrors)>0):
 #%%    
 import pandas as pd
 #CHECK DATASET
-fileNames = ['inglaterra','inglaterra2','inglaterra3',
+fileNames = ['inglaterra','inglaterra2','inglaterra3','inglaterra4',
              'italia','italia2','italia3',
              'espanha','espanha2','franca','franca2','alemanha','alemanha2',
              'portugal','holanda_belgica','europa_ocidental','europa_ocidental2','nordicos',

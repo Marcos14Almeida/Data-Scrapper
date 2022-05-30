@@ -27,16 +27,30 @@ def renameClubs(clubName):
         clubName = "Derby County"
     elif(clubName == "Blackburn Rovers"):
         clubName = "Blackburn"        
+    elif(clubName == "Bolton Wanderers"):
+        clubName = "Bolton"    
     elif(clubName == "AFC Bournemouth"):
         clubName = "Bournemouth" 
     elif(clubName == "Brighton & Hove Albion"):
         clubName = "Brighton"    
+    elif(clubName == "Coventry City"):
+        clubName = "Coventry"        
+    elif(clubName == "Luton Town"):
+        clubName = "Luton Town"             
     elif(clubName == "Norwich City"):
         clubName = "Norwich"          
     elif(clubName == "Queens Park Rangers"):
         clubName = "QPR"          
+    elif(clubName == "Peterborough United"):
+        clubName = "Peterborough"          
     elif(clubName == "Swansea City"):
-        clubName = "Swansea"          
+        clubName = "Swansea"           
+    elif(clubName == "Shrewsbury Town"):
+        clubName = "Shrewsbury"          
+    elif(clubName == "Wycombe Wanderers"):
+        clubName = "Wycombe"          
+    elif(clubName == "AFC Wimbledon"):
+        clubName = "Wimbledon"          
 #%%
     elif(clubName == "FC Barcelona"):
         clubName = "Barcelona"
@@ -113,6 +127,8 @@ def renameClubs(clubName):
 #%%
     elif(clubName == "Ascoli Calcio"):
         clubName = "Ascoli"
+    elif(clubName == "US Alessandria"):
+        clubName = "Alessandria"     
     elif(clubName == "SSC Bari"):
         clubName = "Bari"     
     elif(clubName == "Brescia Calcio"):
@@ -121,6 +137,8 @@ def renameClubs(clubName):
         clubName = "Como"  
     elif(clubName == "US Cremonese"):
         clubName = "Cremonese"
+    elif(clubName == "Cosenza Calcio"):
+        clubName = "Cosenza"
     elif(clubName == "Frosinone Calcio"):
         clubName = "Frosinone"
     elif(clubName == "AC Monza"):
@@ -129,10 +147,18 @@ def renameClubs(clubName):
         clubName = "Palermo"       
     elif(clubName == "Pisa SC"):
         clubName = "Pisa"            
+    elif(clubName == "Pordenone Calcio"):
+        clubName = "Pordenone"            
     elif(clubName == "AC Perugia"):
         clubName = "Perugia"     
+    elif(clubName == "Reggina 1914"):
+        clubName = "Reggina"
+    elif(clubName == "Ternana Calcio"):
+        clubName = "Ternana"
     elif(clubName == "LR Vicenza"):
         clubName = "Vicenza"
+    elif(clubName == "US Salernitana 1919"):
+        clubName = "Salernitana"
 #%% 
     elif(clubName == "FC Bayern München"):
         clubName = "Bayern Munique"
@@ -178,7 +204,9 @@ def renameClubs(clubName):
     elif(clubName == "F.C. Hansa Rostock"):
         clubName = "Hansa Rostock"      
     elif(clubName == "1. FC Heidenheim 1846"):
-        clubName = "Heidenheim"    
+        clubName = "Heidenheim"      
+    elif(clubName == "SSV Jahn Regensburg"):
+        clubName = "Jahn Regensburg"   
     elif(clubName == "1. FC Kaiserslautern"):
         clubName = "Kaiserslautern"        
     elif(clubName == "Karlsruher SC"):
@@ -288,6 +316,8 @@ def renameClubs(clubName):
         clubName = "Coimbra" 
     elif(clubName == "Moreirense FC"):
         clubName = "Moreirense" 
+    elif(clubName == "CD Nacional"):
+        clubName = "Nacional PT" 
 #%%
     elif(clubName == "SC Heerenveen"):
         clubName = "Heerenveen" 
@@ -330,6 +360,8 @@ def renameClubs(clubName):
         clubName = "Lugano"         
     elif(clubName == "Grasshopper Club Zürich"):
         clubName = "Grasshopper"        
+    elif(clubName == "FC Luzern"):
+        clubName = "Luzern"         
         #AUSTRIA
     elif(clubName == "SK Sturm Graz"):
         clubName = "Sturm Graz"           
@@ -558,6 +590,10 @@ def renameClubs(clubName):
         clubName = "Caxias do Sul" 
     elif(clubName == "Brusque FC"):
         clubName = "Brusque" 
+    elif(clubName == "AA Internacional"):
+        clubName = "Inter Limeira" 
+    elif(clubName == "CA Juventus"):
+        clubName = "Juventus Mooca" 
 #%% 
     elif(clubName == "Club Atlético Colón"):
         clubName = "Colón"  
@@ -765,6 +801,10 @@ def renameClubs(clubName):
         clubName = "Mazembe" 
     elif(clubName == "Wydad AC"):
         clubName = "Wydad Casablanca"   
+    elif(clubName == "Petro Atlético"):
+        clubName = "Petro Atlético" 
+    elif(clubName == "ES Sétif"):
+        clubName = "ES Sétif" 
 #%%        
     elif(clubName == "Melbourne City FC"):
         clubName = "Melbourne City"           

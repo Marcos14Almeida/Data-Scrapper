@@ -59,11 +59,15 @@ def soccerWiki(clubID):
     #Ex: WeventonG -> 'Weverto','nG,'' -> 'Weverton','G'    
     name_list = []
     positions_list=[]
-    for x in all_players:    
-      positions = x.split(',')     
+    for x in all_players:  
+      positions = x.split(',')    
       name = re.split('([a-z][A-Z])',positions[0]) #() mantem os delimitadores
-      #print(name)
-      name[0] = name[0] +name[1][0] #junta o nome com a ultima letra que foi separada -> Se der Erro aqui é por causa de caracter invalido
+      try:
+       name[0] = name[0] + name[1][0] #junta o nome com a ultima letra que foi separada -> Se der Erro aqui é por causa de caracter invalido
+      except: #Se o nome for singular Ex: Sorriso MA, ao invés de Sorriso AcscMA
+          name = re.split('([a-z] [A-Z])',positions[0])
+          name[0] = name[0] + name[1][0] #junta o nome com a ultima letra que foi separada -> Se der Erro aqui é por causa de caracter invalido
+         
       name[1] = name[1][1]+name[2] #junta o nome da posicao
       name = list(filter(None, name)) #remove espaçoes vazio
       name_list.append(name[0])
