@@ -77,6 +77,8 @@ def renameNationality(nationality):
         nationality = 'Egypt'
     elif(nationality == 'Equador'):
         nationality = 'Ecuador'
+    elif(nationality == 'Emirados Árabes Unidos'):
+        nationality = 'United Arab Emirates'
     elif(nationality == 'Escócia'):
         nationality = 'Scotland'
     elif(nationality == 'Eslováquia'):
@@ -97,6 +99,8 @@ def renameNationality(nationality):
         nationality = 'Greece'
     elif(nationality == 'Irã'):
         nationality = 'Iran'
+    elif(nationality == 'Inglaterra'):
+        nationality = 'England'
     elif(nationality == 'Irlanda'):
         nationality = 'Ireland'
     elif(nationality == 'Republic of Ireland'):
@@ -121,6 +125,8 @@ def renameNationality(nationality):
         nationality = 'Iceland'
     elif(nationality == 'Holanda'):
         nationality = 'Netherlands'
+    elif(nationality == 'Líbano'):
+        nationality = 'Lebanon'
     elif(nationality == 'Líbia'):
         nationality = 'Libya'
     elif(nationality == 'Luxemburgo'):
@@ -155,6 +161,8 @@ def renameNationality(nationality):
         nationality = 'Peru'
     elif(nationality == 'Polônia'):
         nationality = 'Poland'
+    elif(nationality == 'Czech republic'):
+        nationality = 'Czech Republic'
     elif(nationality == 'República Tcheca'):
         nationality = 'Czech Republic'
     elif(nationality == 'República Centro-Africana'):
